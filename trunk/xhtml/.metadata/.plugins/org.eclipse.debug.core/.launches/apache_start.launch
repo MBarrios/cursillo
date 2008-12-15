@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launchConfiguration type="net.sourceforge.phpeclipse.externaltools.ProgramLaunchConfigurationType">
-<stringAttribute key="net.sourceforge.phpeclipse.externaltools.ATTR_TOOL_ARGUMENTS" value="-c &quot;DocumentRoot &quot;C:/Documents and Settings/GERTU/Escritorio/mysqlPHP&quot;&quot;"/>
-<stringAttribute key="net.sourceforge.phpeclipse.externaltools.ATTR_LOCATION" value="c:\apache\apache.exe"/>
-<booleanAttribute key="net.sourceforge.phpeclipse.externaltools.ATTR_RUN_IN_BACKGROUND" value="true"/>
-</launchConfiguration>
