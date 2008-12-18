@@ -1,0 +1,29 @@
+body{
+  background-color: #e3e3e3;
+  font-family:Arial, Helvetica, sans-serif;
+font-size: 0.8em;
+  }
+#general{
+  width: 800px;
+  height: 400px;
+  text-align: center;
+  margin: 0px Auto;
+  }
+#cabecera{
+  background-color:#0066cc;
+  color:#ffffff;
+  width: 95%;
+  height: 25%;
+
+}
+#cuerpo{
+  background-color: #cccccc;
+  width: 95%;
+  height: 65%;
+  text-align: left;
+  }
+#pie{
+	background-color: #0066cc;
+	width: 95%;
+	height: 10%;
+	}
