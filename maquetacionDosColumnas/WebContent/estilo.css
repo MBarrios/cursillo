@@ -1,0 +1,81 @@
+body{
+	text-align: center;
+
+	background-image: url("imagenes/fondo.gif");
+
+	}
+#contenedor{
+	width:700px;
+	margin: 0px Auto;
+	text-align: left;
+	background-image: none;
+	background-color: #ffffff;
+padding:5px;
+
+	}
+#cabecera{
+	background-image: url("imagenes/curva.gif");
+    background-color:#990000;
+    background-repeat: no-repeat;
+	background-position: bottom;
+    text-align: right;
+    color: #ffffff;
+    font-family: "Courier New",Courier, monospace;;
+padding-top: 5px;
+padding-bottom: 10px;
+padding-right: 5px;
+
+}
+#contenido1{
+	width: 300px;
+	padding: 20px;
+	/*el siguiente div q se defina (cotenido en este caso) flotara y se colocara a su izquierda*/
+	float: left;
+    text-align: justify;
+    color: #990000;
+    font-family:sans-serif;
+	font-size:0.8em;
+	}
+	/*no hace falta darle anchura, se adaptara segun el contenido*/
+#contenido2{
+	/*habra q darle un margen para dejarle sitio al div anterior*/
+	margin-left: 350px; /*un poco mas ancho q el menu*/
+	padding: 20px;
+	width: 300px;
+	text-align: justify;
+	color: #990000;
+	font-family:sans-serif;
+	font-size:0.8em;
+	}
+#pie{
+	/*como no tiene altura fija*/
+	clear: both;
+	padding-top:10px;
+	background-color:#990000;
+		background-image: url("imagenes/curva_pie.gif");
+		background-repeat: no-repeat;
+		text-align: center;
+
+	}
+/*propiedad titulo de la cabecera, para quitar el espacio entre lineas*/
+	h1{
+	line-height: 0px;
+	}
+h2{
+	border-bottom-style: solid;
+	border-bottom-color:#ff5a39;
+	color:#990000;
+}
+/*quitar el subrayado al link y quitar el interlinieado*/
+a{
+	text-decoration: none;
+	line-height: 0px;
+}
+#linkTexto{
+	color: green;
+	text-decoration: underline;
+	}
+/*color de las dos ultimas palabras del pie de pagina*/
+#amarillo{
+color: #ffe339;
+}
