@@ -1,0 +1,109 @@
+body {
+	text-align: center;
+	background-color: #cccc9a;
+	font-size:0.7em;
+	color: #676733;
+}
+
+#pieFondo {
+	margin: 0px Auto;
+	background-color: #d4d3a7;
+	width: 843px;
+	height: 551px;
+	background-image: url("../images/fondopie.gif");
+	background-repeat: no-repeat;
+	background-position:bottom;
+
+	/*borde para q cuadre todo, del mismo color que el body para q no se vea*/
+	border-style: solid;
+    border-width: thin;
+    border-color: #cccc9a;
+/*caja q contiene la cabezera y el cuerpo*/
+}
+#cabeceraCuerpo {
+	width: 817px;
+	height: 473px;
+	margin: 15px 13px;
+
+}
+
+#cabecera {
+	text-align: right;
+	width: 817px;
+	height: 111px;
+	background-image: url("../images/cabecera.jpg");
+	background-repeat: no-repeat;
+	margin: 0px  0px;
+
+}
+#menuDiv{
+		margin-left: 500px;
+		padding-top: 90px;
+	}
+#menu{
+	 float:left;
+	 color: #ffffff;
+	 font-size: 14px;
+	font-family: Verdana;
+ font-weight: bold;
+	}
+
+#contenido {
+	width: 817px;
+	height: 362px;
+	margin: 0px 0px;
+font-family: Verdana;
+}
+
+#imagenIzq {
+	width: 407px;
+	height: 362px;
+	background-image: url("../images/fotoportada.jpg");
+	float: left;
+
+}
+
+#texto {
+	width: 385px;
+	height: 362px;
+	margin-left: 420px;
+
+}
+
+#submenu {
+	width: 385px;
+	height: 82px;
+	text-align: justify;
+
+}
+
+#imagen {
+	background-position: bottom;
+	width: 74px;
+	height: 74px;
+	background-image: url("../images/f1.jpg");
+	float: left;
+	margin-top: 0px;
+}
+#parrafo {
+	width: 300px;
+	height: 82px;
+	font-size: 9px;
+	margin-left: 85px;
+	color: #676636;
+}
+h3 {margin-top:0px;
+	border-bottom-style: solid;
+	text-align: right;
+	border-bottom-width: thin;
+	color: #666634;
+	font-weight: normal;
+	font-size: 12px
+}
+
+h5 {margin-top:0px;
+font-size:10px;
+	text-decoration: underline;
+	text-align: right;
+	color: #666632;
+}
