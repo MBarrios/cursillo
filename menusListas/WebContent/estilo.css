@@ -9,6 +9,7 @@ ul{
   }
 li{
  	padding-left: 12px;
- 	background: url("/Imagenes/larazon.jpg") 0em 0.5em no-repeat;
  	margin-bottom: 1px;
+ 	display: block;
+ 	float: left;
  	}
