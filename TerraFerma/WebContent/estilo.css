@@ -67,13 +67,15 @@ font-family: Verdana;
 	width: 385px;
 	height: 362px;
 	margin-left: 420px;
-
+	text-align: right;
+	margin-right: 0px;
 }
 
 #submenu {
 	width: 385px;
 	height: 82px;
-	text-align: justify;
+	text-align:right;
+	margin-right: 0px;
 
 }
 

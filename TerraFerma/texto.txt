@@ -1,0 +1,14 @@
+      El contenido de la parte derecha se puede hacer con cuatro
+divs, introduciendo en cada div una imagen y su texto. Las fotos
+tendran el atributo float para poder poner el texto a su izquie-
+da en vez de abajo.
+
+      Intentar utilizar menos los margin y los paddings. Mejor
+utilizar alturas y anchuras absolutas. Y en caso de necesitar-
+los inicializarlos en 0px y en caso necesario ponerlo en el div
+necesario.
+
+Correccion:
+		- Los subtitulos de cada foto son links, que se ponen
+naranjas al ponerse encima.
+        - El texto esta alineado a la derecha, no justificado.
