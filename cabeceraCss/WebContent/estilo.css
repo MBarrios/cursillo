@@ -1,0 +1,29 @@
+#cabecera {
+	width: 817px;
+	height: 111px;
+	background: url("../images/cabecera.jpg") top left no-repeat;
+	margin: 0px Auto;
+	padding: 0px;
+}
+#cabecera h1{
+	margin: 0px;
+
+	}
+#cabecera a span{
+	visibility: hidden;
+}
+/*sin las siguientes lineas lo unico q conseguiremos sera un link del
+tamaño del texto del link y el subrayado de el mismo*/
+#cabecera a{
+	width: 817px;
+	height: 111px;
+	/*para q se comporte como una caja, se utiliza para q el elemento
+	menos se comporte como el mayor, en este caso para q el enlace se 
+	comporte como el div. Ademas con esto conseguiremos q al poner un 
+	menu en la cabecera se superponga y este funcione como tal*/
+	display: block;
+	text-decoration: none;
+    /*nos aseguramos de que todo cuadre*/
+    padding:0px 0px;
+    margin: 0px auto;
+}
