@@ -1,0 +1,34 @@
+#menu ul {
+
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	width: 850px;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#menu ul li {
+	/*background-color: #cccccc;*/
+	display: block;
+float: left;
+}
+#menu ul li a {
+	color:#000000;
+	text-decoration: none;
+	background-color: #cccccc;
+	/*el enlace se comporta como el elemento que lo contiene*/
+	border: solid #f4b24d;
+	text-align:center;
+margin-top:0px;
+	margin-left:10px;
+	width:150px;
+	/*en caso de que salgan delreves poner left y asi flotaran hacia el otro lado*/
+
+}
+#menu ul li a:hover {
+    margin-top:6px;
+	background: #e5e5e5;
+
+}
