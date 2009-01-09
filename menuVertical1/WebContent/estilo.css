@@ -1,0 +1,30 @@
+#menu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	width: 150px;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#menu ul li {
+	background-color: #c9eded;
+margin: 3px;
+
+}
+#menu ul li a {
+	color: #4695b6;
+	text-decoration: none;
+	/*el enlace se comporta como el elemento que lo contiene*/
+	display: block;
+	border: solid #0ecfcf;
+
+
+}
+#menu ul li a:hover {
+	background: #5bc8c8;
+
+	color: #00005f;
+
+}
