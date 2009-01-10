@@ -1,0 +1,144 @@
+body {
+  background-color: #660000;
+}
+
+#general {
+  width: 800px;
+  margin: 0px Auto;
+}
+#cabecera{
+  height:23px;
+    background-image: url("imagenes/fondocab.gif");
+    background-repeat: repeat-x;
+    background-position: top;
+    }
+#contenido{
+  width:800px;
+  height:800px;
+   background-color: #ebe9dd;
+margin:0px 0px;
+
+}
+#col1{
+        width: 220px;
+        margin:0px 0px;
+        float:left;
+}
+
+#imagen_marca{
+  width:220px;
+  height:360px;
+   background-image: url("imagenes/ImagenMarca.jpg");
+   background-repeat: no-repeat;
+   background-position: top;
+
+}
+#menu{
+width: 170px;
+margin: 0px 0px;
+
+}
+#menu ul {
+  list-style-type: none;
+}
+
+#menu ul li {
+ margin-top:3px;
+
+}
+.imagen{
+  text-decoration:none;
+  /*esto es un ejemplo, despues cada uno tiene q tener su propia imagen"*/
+
+display: block;
+width: 170px;
+height: 20px;
+
+}
+#img1.imagen{
+         background-image:url("imagenes/b_historiadelvino1.gif");
+        }
+        #img2.imagen{
+         background-image:url("imagenes/b_lacata1.gif");
+        }
+        #img3.imagen{
+         background-image:url("imagenes/b_preguntas1.gif");
+        }
+        #img4.imagen{
+         background-image:url("imagenes/b_tinto1.gif");
+        }
+        #img5.imagen{
+         background-image:url("imagenes/b_blanco1.gif");
+        }
+        #img6.imagen{
+         background-image:url("imagenes/b_rosado1.gif");
+        }
+#menu ul li     #img1.imagen:hover {
+         background-image:url("imagenes/b_historiadelvino2.gif");
+        }
+#menu ul li     #img2.imagen:hover {
+         background-image:url("imagenes/b_lacata2.gif");
+        }
+#menu ul li     #img3.imagen:hover {
+         background-image:url("imagenes/b_preguntas2.gif");
+        }
+#menu ul li     #img4.imagen:hover {
+         background-image:url("imagenes/b_tinto2.gif");
+        }
+#menu ul li     #img5.imagen:hover {
+         background-image:url("imagenes/b_blanco2.gif");
+        }
+#menu ul li #img6.imagen:hover {
+ background-image:url("imagenes/b_rosado2.gif");
+}
+#menu ul li a span{
+        visibility: hidden;
+
+}
+#col2{
+        width: 570px;
+        margin-left: 230px;
+}
+#tit{
+        width:471px;
+        height:88px;
+margin:0px 50px;
+        background-image: url("imagenes/tit_historia.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+
+#text1{
+        text-align: justify;
+        font-size: 12px;
+        padding: 0px 3px;
+        font-family: sans-serif;
+        font-weight: bold;
+}
+#uvas{
+        width:210px;
+        height:110px;
+background-image: url("imagenes/uvas.jpg");
+float: left;
+}
+#imagenes{
+        margin:20px 0px;}
+#corcho{
+        width:210px;
+        height:110px;
+background-image: url("imagenes/corcho.jpg");
+margin-left: 220px;
+}
+#col2 a{
+        font-size:80%;
+        font-weight: bold;
+        color: #5e3634;
+margin: 0px 120px;
+}
+#pie{
+width:800px;
+height:23px;
+        background-image: url("imagenes/fondopie.gif");
+background-position: top;
+background-repeat: repeat-x;
+}
