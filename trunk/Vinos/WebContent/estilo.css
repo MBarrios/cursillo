@@ -14,7 +14,7 @@ body {
     }
 #contenido{
   width:800px;
-  height:800px;
+
    background-color: #ebe9dd;
 margin:0px 0px;
 
@@ -99,22 +99,27 @@ height: 20px;
         width: 570px;
         margin-left: 230px;
 }
-#tit{
+.tit_img{
         width:471px;
         height:88px;
-margin:0px 50px;
-        background-image: url("imagenes/tit_historia.gif");
+        margin:0px 50px;
+
         background-repeat: no-repeat;
         background-position: center;
         }
-
+#tit_historia.tit_img{
+	 background-image: url("imagenes/tit_historia.gif");
+	}
+	#tit_lacata.tit_img{
+	 background-image: url("imagenes/tit_lacata.gif");
+	}
 #text1{
         text-align: justify;
-        font-size: 12px;
+        font-size: 11px;
         padding: 0px 3px;
-        font-family: sans-serif;
-        font-weight: bold;
+        font-family: verdana,sans-serif;
 }
+.negrita{font-weight: bold;}
 #uvas{
         width:210px;
         height:110px;
@@ -133,7 +138,7 @@ margin-left: 220px;
         font-size:80%;
         font-weight: bold;
         color: #5e3634;
-margin: 0px 120px;
+margin: 40px 120px;
 }
 #pie{
 width:800px;
