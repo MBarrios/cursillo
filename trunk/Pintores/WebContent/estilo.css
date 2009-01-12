@@ -1,0 +1,63 @@
+#general{
+	width:760px;
+	margin: 10px auto;
+	border-style: solid;
+	border-color:#cccccc;
+	border-width:thin;
+	text-align: center;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+}
+#cabecera{
+	width:640px;
+	height:51px;
+	margin:10px auto;
+	background-image:url("IMAGENES/AMIGOSDE.GIF");
+	background-repeat: no-repeat;
+	background-position: top;
+
+}
+#menu_h{
+	width:760px;
+	height:30px;
+	padding-top:10px;
+	border-top-style: solid;
+	border-top-color: #ff0000;
+	border-top-width: 14px;
+    background-image: url("IMAGENES/fondito.gif");
+}
+#inicio{
+	margin: 10px auto;
+	}
+a{
+	text-decoration:none;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:#ff0000;
+	}
+#pie{
+	width:760px;
+	height:20px;
+	background-image: url("IMAGENES/fondito.gif");
+}
+#menu_v{
+	width:140px;
+text-align:left;
+margin-left: 0px;
+margin-top:8px;
+list-style: none;
+float: left;
+}
+#menu_v ol li{
+	margin:6px 10px;
+}
+#retratos{
+	width:600px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.foto{
+margin:7px 10px;
+}
