@@ -1,0 +1,142 @@
+body{
+	background-color: #9fa9ab;
+	}
+#general{
+	width:760px;
+	margin:0px auto;
+	background-color: #ffffff;
+	border-style: solid;
+	border-color: transparent;
+	border-width:1px;
+	font-family: verdana;
+	font-size: 11px;
+}
+#contenido{
+	width: 748px;
+	height:880px;
+	background-color:#d6dadb;
+	margin:0px 6px 6px 6px;
+	text-align: justify;
+	border-style: solid;
+	border-color: transparent;
+	border-width:1px;
+}
+.cabecera{
+	width:749px;
+	height:168px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin: 0px 6px 0px 6px;
+
+	}
+#index.cabecera{
+	background-image: url("images/fotocabecera_Elemblema.jpg");
+}
+#agroturismo.cabecera{
+	background-image: url("images/fotocabecera_Agroturismo.jpg");
+}
+#mapa.cabecera{
+	background-image: url("images/fotocabecera_Mapa.jpg");
+}
+#datos.cabecera{
+	background-image: url("images/fotocabecera_Datos.jpg");
+}
+#pag_actual{
+	width: 748px;
+	background-color: #999999;
+	margin: 0px 6px;
+}
+.cabecera ul{
+	width:400px;
+	list-style-type: none;
+	margin: 0px 0px;
+	padding-left: 45px;
+	padding-top: 145px;
+	margin-left: 345px;
+}
+.cabecera ul li{
+	padding:0px 0px;
+	margin:0px 0px;
+	display: block;
+	float: left;
+
+	}
+.cabecera ul li a{
+	text-decoration: none;
+	color: yellow;
+}
+/*cuerpo*/
+#col1{
+	width: 235px;
+	float: left;
+	margin: 0px 0px;
+	border-style: solid;
+border-color: transparent;
+	border-width:1px;
+}
+#col2{
+	width: 235px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 0px;
+	border-style: solid;
+border-color: transparent;
+	border-width:1px;
+}
+#col3{
+	width: 235px;
+	margin-right:0px;
+	margin-left: 504px;
+	border-style: solid;
+border-color: transparent;
+	border-width:1px;
+}
+#tabla{
+background-color:#d6dadb ;
+
+	/*font-family: verdana;
+	font-size: 9px;*/
+}
+caption{
+	background-color: yellow;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+}
+.fondo_celda{
+	background-color: #fdfdfd;
+	}
+.borde_imagen{
+border-style: solid;
+border-width: thin;
+}
+#pie{
+	width:760px;
+	height:15px;
+	border-style: solid;
+	/*border-color: transparent;*/
+	border-width: 1px;
+	/*background-color:#9fa9ab;*/
+	clear: both;
+   }
+#esq_izq{
+	width:15px;
+	height:15px;
+  background-image: url("images/esquina_inf_izda.gif");
+  float: left;
+  margin-left: 0px;
+
+  }
+#inferior{
+ 	height:15px;
+	width:730px;
+	background-image: url("images/lateral_inf.gif");
+	float: left;
+	/*margin-left: 16px;*/
+  }
+#esq_dcha{
+	width:15px;
+	height:15px;
+  	background-image: url("images/esquina_inf_dcha.gif");
+  	margin-left: 745px;
+
+}
