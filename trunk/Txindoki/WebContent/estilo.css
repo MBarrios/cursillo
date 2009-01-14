@@ -1,25 +1,28 @@
 body{
 	background-color: #9fa9ab;
+
 	}
 #general{
 	width:760px;
-	margin:0px auto;
+	margin:auto auto;
 	background-color: #ffffff;
 	border-style: solid;
 	border-color: transparent;
 	border-width:1px;
 	font-family: verdana;
 	font-size: 11px;
+	clear: both;
 }
 #contenido{
-	width: 748px;
-	height:880px;
-	background-color:#d6dadb;
+	width: 745px;
+
 	margin:0px 6px 6px 6px;
+	background-color:#d6dadb;
 	text-align: justify;
 	border-style: solid;
 	border-color: transparent;
 	border-width:1px;
+	clear: both;
 }
 .cabecera{
 	width:749px;
@@ -73,6 +76,8 @@ body{
 	border-style: solid;
 border-color: transparent;
 	border-width:1px;
+	margin-top: 5px;
+
 }
 #col2{
 	width: 235px;
@@ -82,14 +87,21 @@ border-color: transparent;
 	border-style: solid;
 border-color: transparent;
 	border-width:1px;
+	margin-top: 5px;
 }
 #col3{
 	width: 235px;
 	margin-right:0px;
-	margin-left: 504px;
+	margin-left: 500px;
 	border-style: solid;
 border-color: transparent;
 	border-width:1px;
+	margin-top: 5px;
+
+
+}#relleno {
+	clear: both;
+	height: 5px;
 }
 #tabla{
 background-color:#d6dadb ;
