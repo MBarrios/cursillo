@@ -1,0 +1,33 @@
+body{
+	font-family: helvetica;
+	font-size: 11px;
+	text-align: justify;
+}
+#general{
+	width: 800px;
+	margin:0px auto;
+}
+.cabecera{
+	width: 800px;
+	height: 150px;
+	text-align: center;
+}
+#menu_v{
+	width: 200px;
+	float: left;
+	border-style: solid;
+	border-width: 1px;
+}
+#menu_v ul{
+	list-style-type: none;
+}
+#menu_v ul li{
+
+
+}
+#informacion{
+	width:595px;
+	margin-left: 205px;
+	border-style: solid;
+	border-width: 1px;
+}
