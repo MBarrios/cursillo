@@ -1,84 +1,142 @@
+/* Padding y margin */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input,/* p, */blockquote, th, td {
+margin: 0;
+padding: 0;
+}
+
+/* Tamaños de los headers */
+h1, h2, h3, h4, h5, h6 {
+font-size: 100%;
+}
+
+/* Estilos de las listas
+ol, ul {
+list-style: none;
+}*/
+
+/* Estilo y grosor de las fuentes */
+address, caption, cite, code, dfn, em, strong, th, var {
+font-style: normal;
+font-weight: normal;
+}
+
+/* Bordes de las tablas */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* Otros bordes */
+fieldset, img {
+border: 0;
+}
+
+/* Alineacón del texto */
+caption, th {
+text-align: left;
+}
+
+/* Comillas */
+q:before, q:after {
+content: ”;
+}
 body{
 	font-family: helvetica;
 	text-align: justify;
-	font-size: 11px;
+
 }
 #general{
 	width: 800px;
 	margin:0px auto;
 	border-style: solid;
 	border-width: 1px;
+font-size: 12px;
 }
 .cabecera{
 	width: 800px;
-	height: 150px;
+	height: 160px;
 	text-align: center;
-	border-style: solid;
-	border-width: 1px;
+	border-bottom-style: solid;
 	border-bottom-color:#737593;
-	border-bottom-width:15px;
+	border-bottom-width:20px;
 	background-image: url("LogoAliquam/logo_escalada.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
 }
-.cabecera ul{
-	width:300px;
-	margin-left:460px;
-	margin-top:150px;
-	list-style-type: none;
-}
-.cabecera ul li{
-	display: block;
-	float: left;
 
-}
-.cabecera ul li a{
-color:white;
-	text-decoration: none;
-
-}
 #menu_v{
 	width: 200px;
+	height:398px;
+
 	float: left;
-	border-style: solid;
-	border-width: 1px;
-	font-size: 12px;
-	background-color:#adafc6;
+padding:0px 0px;
+margin:0px 0px;
+	font-size: 16px;
+	background-image: url("LogoAliquam/fondo_menu2.jpg");
+	background-position:center;
+	background-repeat: no-repeat;
+	background-color: #737593;
 }
 #menu_v ul{
-	list-style-type: none;
-  padding-left: 0;
-  margin-left:0;
-  text-align: center;
-
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left:0px;
+  text-align: left;
+font-weight: bold;;
 }
  #menu_v ul li{
- margin: 10px 30px;
- border-style: ridge;
-background-color:#737593;
-	border-color: #4b4d6a;
-	padding: 5px 0px;
+ width:120px;
+ margin-top:0px;
+ margin-bottom:22px;
+ margin-left:20px;
+padding: 0px 0px;
+
+
 
  }
 #menu_v ul li a{
 	text-decoration: none;
-
+	color: #ffffff;
+}
+#menu_v ul li a:hover{
+	font-size:18px;
 }
 #contenido{
 	width: 800px;
+
+
 }
+#contenido_seguros{
+	width:700px;
+	margin: 40px 30px;
+	}
 #informacion{
-	width:593px;
+	width:563px;
 	margin-left: 205px;
-	border-style: solid;
-	border-width: 1px;
-	font-size: 12px;
+
+	font-size: 13px;
 }
+#menu_h{
+	list-style-type: none;
+	padding:20px 0px 20px 30px;
+
+}
+#menu_h li{
+	display: block;
+	float: left;
+background-image: url("LogoAliquam/icono.jpg");
+			background-repeat: no-repeat;
+
+
+}
+#menu_h li a{
+padding-left:15px;
+	text-decoration: none;
+	color: #737593;
+	}
 #ajuste_columnas{
 	width: 800;
 	height: 1px;
-	border-style: solid;
-	border-width: 1px;
 	clear: both;
 	}
 .sangria{
@@ -88,7 +146,54 @@ background-color:#737593;
 	font-size: 10px;
 }
 .imagen{
- 	background-image: url("Fotos/manos.jpg");
- 	width: 200px;
- 	height: 119px;
+ 	/*background-image: url("Fotos/manos.jpg");*/
+ 	width: 154px;
+ 	height: 150px;
+ 	background-repeat: no-repeat;
  	}
+#laboral.imagen{
+	background-image: url("Fotos/calendario.jpg");
+
+	}
+	#fiscal.imagen{
+	background-image: url("Fotos/balanza2.jpg");
+	}
+	#contabilidad.imagen{
+	background-image: url("Fotos/euros.jpg");
+	}
+	#ayudas.imagen{
+	background-image: url("Fotos/manos.jpg");
+	}
+	#seguros.imagen{
+	background-image: url("Fotos/uf.jpg");
+	}
+	#index.imagen{
+	background-image: url("Fotos/gente.jpg");
+	}
+	#contacto.imagen{
+	background-image: url("Fotos/telefonista.jpg");
+	}
+	#enlaces.imagen{
+	background-image: url("Fotos/enlaces.jpg");
+	}
+	#cliente.imagen{
+	background-image: url("Fotos/firmando.jpg");
+	}
+ul{
+margin:0px 10px 10px 30px;
+list-style-type: none;
+}
+#simple{
+background-image: url("LogoAliquam/punto_listas.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-position: left;
+padding-left: 15px;
+}
+#simple a{
+	text-decoration: none;
+	color: #000000;
+}
+#negrita{
+font-weight: bold;
+}
