@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<script language="javascript" type="text/javascript">
+			var x=parseInt(window.prompt("Introduce numero:"));
+			var count=0,copia=x,resto;
+			for(x;x>0;x--){
+				resto=copia%x;
+				if(resto==0)
+					count++;
+				}
+			if(count>2)
+				document.write("no es primo");
+			else document.write("es primo");
+		</script>
+	</body>
+</html>
