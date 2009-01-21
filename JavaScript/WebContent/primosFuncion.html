@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3g.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+	<head>
+		<title>Mi pagina</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script language="javascript" type="text/javascript">
+			function esPrimo(x){
+				var count=0,copia=x,resto;
+				for(x;x>0;x--){
+					resto=copia%x;
+					if(resto==0)
+						count++;
+					}
+				if(count>2)
+					document.write("no es primo <BR>");
+				else document.write("es primo <BR>");
+				}
+		</script>
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			num1=parseInt(window.prompt("Introduce numero:"));
+			num2=parseInt(window.prompt("Introduce numero:"));
+			esPrimo(num1);
+			esPrimo(num2);
+			document.write(num1*num2+"<BR>");
+			esPrimo(num1*num2);
+
+		</script>
+	</body>
+</html>
