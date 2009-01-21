@@ -13,21 +13,52 @@
 			var c;
 			var x=window.prompt("Introduce palabra:");
 			var largo=x.length;
-			var palabraOculta="1";
-			for(var i=0;i<largo;i++){
-			palabraOculta=palabraOculta+"-";}
-			while ((cuenta>0)){
+			var palabraOculta="-";
+			var palabraEntera=x;
+			for(var i=1;i<largo;i++){
+				palabraOculta=palabraOculta+"-";}
+			while (cuenta>0){
+
+				x=palabraEntera;
 				c=window.prompt("Introduce caracter:");
-				cuenta--;
+				indice=x.indexOf(c);
+
+				if (indice!=-1)
+
+				while(indice!=-1){
+
+					/*mejor con while*/
+					for(var i=0;i<largo;i++)
+					{document.write(indice+"<br>");
+
+					 if(i==indice){
+							document.write("dentro del if<br>");
+							var sub1=palabraOculta.substring(0,indice);
+							document.write(sub1+"<br>");
+								var sub2=palabraOculta.substring(indice+1);
+								x=x.substring(indice+1);
+							document.write(sub2+"<br>");
+							palabraOculta=sub1+c+sub2;
+							document.write(palabraOculta+"<br>");
+
+							document.write(x+"<br>");
+					        largo=x.length;
+					        indice=x.indexOf(c);
+							}
+					else{
+
+					}
+					}
+				}
+				else
+					cuenta--;
+
 				}
 /*					valorInicial=x;
 					indice=x.indexOf(c);
 
 					}*/
-			indice=x.indexOf(c);
-			document.write(indice);
-			x=x.substring(indice+1);
-			document.write(x);
+
 		/*		if (acierto==largo)
 					conseguido=true;
 
