@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>sdafsdf</title>
+<script language="JavaScript">
+<!--
+function abreNuevaVentana(nombreVentana)
+{
+// abrir una nueva ventana con el nombre pasado como parámetro
+// no se especifica una URL
+miVentana= open("", nombreVentana,"width=500, height=400, status=yes, toolbar=yes ,menubar=yes");
+// Abre la corriente de datos del documento para escribir
+miVentana.document.open();
+// Crea el documento
+miVentana.document.write("<html><head><title>On-the-fly");
+miVentana.document.write("<+"/"+title><+"/"+head><body>");
+miVentana.document.write("<h1>Creando documentos al vuelo<+"/"+h1>");
+miVentana.document.write("<p>&nbsp;<+"/"+p>");
+miVentana.document.write("<p>El contenido es din&aacute;mico<+"/"+p>");
+miVentana.document.write("<+"/"+body><+"/"+html>");
+// cierra la corriente de datos del documento
+miVentana.document.close();
+}
+// -->
+</script>
+</head>
+<body>
+<form><input type=button value="On-the-fly" onClick="abreNuevaVentana("nueva")"></form>
+</body>
+</html>

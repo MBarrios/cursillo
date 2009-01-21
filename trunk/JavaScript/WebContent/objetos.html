@@ -1,0 +1,34 @@
+ <html>
+    <head>
+    <script language="javascript">
+    function Persona(nombre) {
+        this.nombre = nombre;
+        this.color_pelo = 'negro';
+        this.peso = 75;
+        this.altura = 165;
+        this.sexo = 'varón';
+        this.dormir = dormir;
+    }
+
+    function dormir() {
+            alert(this.nombre + ' está durmiendo'+this.color_pelo);
+    }
+    </script>
+    </head>
+
+    <body>
+    <form>
+    </form>
+    <script>
+        var hombre = new Persona('Pepe');
+        var hombre2=new Persona('mikel');
+        hombre2.color_pelo='marron';
+		var x=window.prompt("Introduce numero:");
+        if (x==hombre.nombre)
+        	hombre.dormir();
+        else if (x==hombre2.nombre)
+        	hombre2.dormir();
+        else alert('nadie duerme');
+    </script>
+    </body>
+    </html>

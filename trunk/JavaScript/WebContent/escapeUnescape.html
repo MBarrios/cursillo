@@ -7,16 +7,13 @@
 	</head>
 	<body>
 		<script language="javascript" type="text/javascript">
-			for(var fila=5;fila<5;fila++){
-				var limite=maxCol/(fila+1);
-					for(var col=1;col<fila-col;col++){
-						document.write("&nbsp;&nbsp;");
-						}
-					for(var col=limite;col<limite+fila;col++){
-						document.write("*&nbsp;&nbsp;");
-						}
-					document.write("<BR>");
-				}
+
+				var x=escape("hola hola");
+				document.write(x);
+				var x=unescape("%23");
+				document.write(x);
+				document.write(escape("a"));
+
 		</script>
 	</body>
 </html>
