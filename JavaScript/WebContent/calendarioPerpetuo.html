@@ -1,0 +1,482 @@
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="keywords" content="calendario perpetuo">
+<meta name="description" content="calendario perpetuo">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document"><title>Calcular día de la semana</title>
+
+<script language="JavaScript">
+<!-- Inicio
+meses = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+dias = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+dura = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+opc = new Array("Pasado","Futuro","Presente");
+function verfecha(tabla) {
+y = tabla.anno.value;
+m = tabla.mes.options[tabla.mes.options.selectedIndex].value;
+d = tabla.dia.options[tabla.dia.options.selectedIndex].value;
+hlpr = dura[m];
+if (d < dura[m] + 1) {
+if (m == 1 && y % 4 == 0) { hlpr++; }
+fec = new Date(y,m,d);
+hoy = new Date();
+ds = fec.getDay();
+tabla.diasem.value = dias[ds];
+if(fec > new Date()) {
+tabla.epoca.value = opc[1];
+total = Math.ceil((fec-hoy)/1000/60/60/24);
+if (total == 1) {
+uni=" día; es decir, mañana.";
+}
+else {
+uni=" días.";
+}
+tabla.dias.value = "Dentro de " + total + uni;
+}
+if(fec < new Date()) {
+tabla.epoca.value = opc[0];
+total = Math.floor((hoy-fec)/1000/60/60/24);
+if (total == 1) {
+uni=" día; es decir, ayer.";
+}
+else {
+uni=" días.";
+}
+tabla.dias.value = "Hace " + total + uni;
+}
+if (y == hoy.getYear() && m == hoy.getMonth() && d == hoy.getDate()) {
+tabla.epoca.value = opc[2];
+tabla.dias.value = "Esa fecha es la de hoy";
+}
+}
+else {
+alert("La fecha "+d+" de "+meses[m]+" de "+y+" no es válida.\nInténtalo de nuevo.");
+}
+}
+function ponera(tabla) {
+y = new Date().getYear();
+if (y < 2000) y += 1900;
+tabla.anno.value = y;
+}
+//  Fin -->
+</script></head><body onload="ponera(tabla)">
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<font face="Arial"><font size="5">Calcula el día de la semana</font>
+
+</font>
+</p><p align="center">
+&nbsp;
+</p><p align="center">
+</p><form name="tabla">
+<p align="center"><b><font face="Arial">Día</font></b> <select name="dia" size="1">
+<option selected="selected" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>&nbsp;&nbsp; <font face="Arial"><b>Mes</b></font> <select name="mes" size="1">
+
+<option selected="selected" value="0">Enero</option>
+<option value="1">Febrero</option>
+<option value="2">Marzo</option>
+<option value="3">Abril</option>
+<option value="4">Mayo</option>
+<option value="5">Junio</option>
+<option value="6">Julio</option>
+<option value="7">Agosto</option>
+<option value="8">Septiembre</option>
+
+<option value="9">Octubre</option>
+<option value="10">Noviembre</option>
+<option value="11">Diciembre</option>
+</select> &nbsp; <b><font face="Arial">Año</font></b> <input name="anno" size="4" type="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input value="Calcular día" name="gdi" onclick="verfecha(this.form)" type="button"></p>
+<p align="center"><br>
+<font face="Arial"><b>Día de la semana:</b></font> <input name="diasem" size="12" type="text">&nbsp; &nbsp;&nbsp;&nbsp;
+
+<b><font face="Arial">Época: </font></b> <input name="epoca" size="10" type="text">&nbsp;&nbsp; &nbsp;&nbsp;
+<b><font face="Arial">Tiempo: </font></b> <input name="dias" size="40" type="text"></p>
+</form>
+
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"><b><a href="index.htm">volver a la web de los comecocos</a></b></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+
+<p align="center"><a name="multiplica"></a></p>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-6750514106882683";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "image";
+google_ad_channel = "";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "6728B2";
+google_color_text = "3D81EE";
+google_color_url = "66B5FF";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+&nbsp;<p align="center">&nbsp;</p>
+<p align="justify" style="line-height: 150%; margin-left: 200px; margin-right: 200px">
+<b><font face="Arial" color="#808080">La cifra 7 procede de la suma de dos
+cifras, siendo necesariamente la inferior un cero o un cinco. Si la inferior es
+0, la superior es 7. Si la inferior es 5, la superior es 2. La superior no puede
+ser 7, ya que es imposible obtenerlo, cualquiera que sea la cifra de las
+unidades del multiplicador. Luego ha de ser un 2.</font></b></p>
+<p align="justify" style="line-height: 150%; margin-left: 200px; margin-right: 200px">&nbsp;</p>
+<div align="center">
+	<table border="0" width="11%" id="table1" cellspacing="0" cellpadding="0">
+		<tr>
+
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>4</b></font></td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>6</b></font></td>
+
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>5</b></font></td>
+		</tr>
+		<tr>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center">&nbsp;</td>
+
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+		</tr>
+		<tr>
+
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+		</tr>
+		<tr>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>2</b></font></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+
+		</tr>
+		<tr>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>5</b></font></td>
+			<td>
+			<p align="center">&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+		</tr>
+		<tr>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">6</font></b></td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>7</b></font></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+		</tr>
+
+	</table>
+	<p align="justify" style="line-height: 150%; margin-left: 200px; margin-right: 200px">
+	<b><font face="Arial" color="#808080">La cifra de las unidades del
+	multiplicador sólo puede tener los valores 5 u 8, ya que en caso contrario
+	el 2 del primer producto parcial no se daría. Probemos con el 5</font></b></p>
+	<table border="0" width="11%" id="table4" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>4</b></font></td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>6</b></font></td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>5</b></font></td>
+
+		</tr>
+		<tr>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">5</font></b></td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+		</tr>
+		<tr>
+			<td>
+			<p align="center">&nbsp;</td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">2</font></b></td>
+			<td>
+
+			<p align="center"><b><font face="Arial" color="#808080">3</font></b></td>
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>2</b></font></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">5</font></b></td>
+		</tr>
+		<tr>
+
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+
+			<p align="center"><font face="Arial" color="#808080"><b>5</b></font></td>
+			<td>
+			<p align="center">&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			<td valign="top">
+			<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+
+		</tr>
+		<tr>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">?</font></b></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">6</font></b></td>
+
+			<td>
+			<p align="center"><font face="Arial" color="#808080"><b>7</b></font></td>
+			<td>
+			<p align="center"><b><font face="Arial" color="#808080">5</font></b></td>
+		</tr>
+	</table>
+	<p align="justify" style="line-height: 150%; margin-left: 200px; margin-right: 200px">
+	<b><font face="Arial" color="#808080">Para mayor claridad, llamemos B a la
+	cifra de las decenas del multiplicador. B ha d ser impar, por ser 5 la
+	última cifra del segundo producto parcial. Dando a B los valores impares
+	comprendidos entre 1 y 9, ambos inclusive, comprobamos que con ninguno de
+	ellos se obtiene un 3 para la cifra de las decenas del segundo producto
+	parcial. Por tanto, el 5 no es válido.</font></b></p>
+
+	<p align="justify" style="line-height: 150%; margin-left: 200px; margin-right: 200px">
+	<b><font face="Arial" color="#808080">Consecuentemente, la cifra de las
+	unidades del multiplicador es un 8. Procediendo del mismo modo, la cifra de
+	las decenas del multiplicador es 3.</font></b></p>
+	<div align="center">
+		<table border="0" width="11%" id="table3" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+				<p align="center">&nbsp;</td>
+				<td>
+
+				<p align="center">&nbsp;</td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>4</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>6</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>5</b></font></td>
+
+			</tr>
+			<tr>
+				<td>
+				<p align="center">&nbsp;</td>
+				<td>
+				<p align="center">&nbsp;</td>
+				<td>
+				<p align="center">&nbsp;</td>
+				<td>
+
+				<p align="center"><font face="Arial" color="#808080"><b>3</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>8</b></font></td>
+			</tr>
+			<tr>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+			</tr>
+			<tr>
+				<td>
+				<p align="center">&nbsp;</td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>3</b></font></td>
+				<td>
+
+				<p align="center"><font face="Arial" color="#808080"><b>7</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>2</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>0</b></font></td>
+			</tr>
+			<tr>
+
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>1</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>3</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>9</b></font></td>
+				<td>
+
+				<p align="center"><font face="Arial" color="#808080"><b>5</b></font></td>
+				<td>
+				<p align="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+				<td valign="top">
+				<p align="center"><b><font face="Arial" color="#808080">--</font></b></td>
+
+			</tr>
+			<tr>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>1</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>7</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>6</b></font></td>
+
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>7</b></font></td>
+				<td>
+				<p align="center"><font face="Arial" color="#808080"><b>0</b></font></td>
+			</tr>
+		</table>
+	</div>
+	<p align="center">&nbsp;</div>
+
+</body></html>
