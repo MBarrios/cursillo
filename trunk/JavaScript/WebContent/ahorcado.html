@@ -17,43 +17,36 @@
 			var palabraEntera=x;
 			for(var i=1;i<largo;i++){
 				palabraOculta=palabraOculta+"-";}
-			while (cuenta>0){
 
+			while (cuenta>0){
+			document.write(palabraOculta+"<br>");
 				x=palabraEntera;
 				c=window.prompt("Introduce caracter:");
 				indice=x.indexOf(c);
-
 				if (indice!=-1)
+					while(indice!=-1){
+					document.write("antes del for<br>");
+						for(var i=0;i<largo;i++)
+						{document.write("ldespues del for <br>");
 
-				while(indice!=-1){
+							if(i==indice){
+								document.write("los indeces don iguales<br>");
+								var sub1=palabraOculta.substring(0,indice);
 
-					/*mejor con while*/
-					for(var i=0;i<largo;i++)
-					{document.write(indice+"<br>");
-
-					 if(i==indice){
-							document.write("dentro del if<br>");
-							var sub1=palabraOculta.substring(0,indice);
-							document.write(sub1+"<br>");
-								var sub2=palabraOculta.substring(indice+1);
-								x=x.substring(indice+1);
-							document.write(sub2+"<br>");
-							palabraOculta=sub1+c+sub2;
-							document.write(palabraOculta+"<br>");
-
-							document.write(x+"<br>");
-					        largo=x.length;
-					        indice=x.indexOf(c);
-							}
-					else{
-
-					}
-					}
-				}
-				else
+									var sub2=palabraOculta.substring(indice+1);
+									x=x.substring(indice+1);
+									palabraOculta=sub1+c+sub2;
+								alert(palabraOculta);
+						        largo=x.length;
+						        indice=x.indexOf(c);
+								}//end if
+						}//end for
+					}//end while
+				else //if indice==-1
 					cuenta--;
-
-				}
+					x= palabraEntera;
+					largo=x.length;
+				}//end while(cuenta)
 /*					valorInicial=x;
 					indice=x.indexOf(c);
 

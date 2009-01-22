@@ -13,21 +13,45 @@
 			var c;
 			var x=window.prompt("Introduce palabra:");
 			var largo=x.length;
-			var palabraOculta="1";
-			for(var i=0;i<largo;i++){
-			palabraOculta=palabraOculta+"-";}
-			while ((cuenta>0)){
+			var palabraOculta="-";
+			var palabraEntera=x;
+			for(var i=1;i<largo;i++){
+				palabraOculta=palabraOculta+"-";}
+
+			while (cuenta>0){
+			document.write(palabraOculta+"<br>");
+				x=palabraEntera;
 				c=window.prompt("Introduce caracter:");
-				cuenta--;
-				}
+				indice=x.indexOf(c);
+				if (indice!=-1)
+					while(indice!=-1){
+					document.write("antes del for<br>");
+						for(var i=0;i<largo;i++)
+						{document.write("ldespues del for <br>");
+
+							if(i==indice){
+								document.write("los indeces don iguales<br>");
+								var sub1=palabraOculta.substring(0,indice);
+
+									var sub2=palabraOculta.substring(indice+1);
+									x=x.substring(indice+1);
+									palabraOculta=sub1+c+sub2;
+								alert(palabraOculta);
+						        largo=x.length;
+						        indice=x.indexOf(c);
+								}//end if
+						}//end for
+					}//end while
+				else //if indice==-1
+					cuenta--;
+					x= palabraEntera;
+					largo=x.length;
+				}//end while(cuenta)
 /*					valorInicial=x;
 					indice=x.indexOf(c);
 
 					}*/
-			indice=x.indexOf(c);
-			document.write(indice);
-			x=x.substring(indice+1);
-			document.write(x);
+
 		/*		if (acierto==largo)
 					conseguido=true;
 
