@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3g.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+	<head>
+		<title>Mi pagina</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			/*var x=parseInt(window.prompt("Introduce numero:"));
+			if(isNaN(x))
+				alert("no es un numero");*/
+
+			 var x=window.prompt("Introduce numero de telefono:");
+
+				for (var i=0;i<x.length;i++){
+					if (isNaN(parseInt(x.charAt(i))))
+						alert(x.charAt(i)+"no es un numero");
+				}
+					if (x.length!=9)
+					alert("el telefono no es correcto, cantidad de digitos incorrecta");
+					else
+					alert("telefono correcto");
+		</script>
+	</body>
+</html>
