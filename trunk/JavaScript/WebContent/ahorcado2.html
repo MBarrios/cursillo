@@ -14,6 +14,7 @@
 			var finalizado=false;
 			var palabraOculta="-";
 			var palabraEntera=x;
+		
 			for(var i=1;i<largo;i++){
 				palabraOculta=palabraOculta+"-";}
 			while (cuenta>0 && finalizado==false){
@@ -37,11 +38,11 @@
 								for (var j=0;j<indice;j++)
 									subx1=subx1+"*";
 								}
-							else
+							else{
 								for (var j=0;j<indice-1;j++)
-									subx1=subx1+"*";
+									subx1=subx1+"*";}
 							x=subx1+subx2;
-						
+							indice=x.indexOf(c);
 							}
 					}
 					var count=0;
@@ -51,6 +52,7 @@
 					if (count==largo)
 						finalizado=true;
 					alert(palabraOculta);
+						x=palabraEntera;
 			}
 			else
 				cuenta--;
