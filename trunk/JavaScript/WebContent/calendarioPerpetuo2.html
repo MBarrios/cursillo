@@ -15,21 +15,21 @@
 	</head>
 	<body>
 		<script language="javascript" type="text/javascript">
-			var año=window.prompt("Introduce el año:");
-			var mesNum=window.prompt("Introduce el mes:");
+			var ano=window.prompt("Introduce el ano:");
+			var mes=window.prompt("Introduce el mes:");
 			var dia=window.prompt("Introduce el dia:");
-			//var año=1980;
+			//var ano=1980;
 			//var mesNum=0;
 			//var dia=8;
 			var meses=new Array("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre");
 			var semana=new Array("domingo","lunes","martes","miercoles","jueves","viernes","sabado");
-           /* var mesNum=0;
+            var mesNum=0;
 
 			for(var i=0;i<meses.length;i++)
 				if(meses[i]==mes)
 					mesNum=i;
-				document.write(mesNum);*/
-            var dia1=new Date(año,mesNum,dia);
+				document.write(mesNum);
+            var dia1=new Date(ano,mesNum,dia);
 			/*domingo   0
 			  lunes     1
 			  martes    2
@@ -40,75 +40,76 @@
 			*/
 			var marcador=0;
 
-			if(año>=1800 && año<=1899)
+			if(ano>=1800 && ano<=1899)
 				marcador=5;
-			if(año>=1900 && año<=1999)
+			if(ano>=1900 && ano<=1999)
 				marcador= 3;
-			if(año>=2000 && año<=2099)
+			if(ano>=2000 && ano<=2099)
 				marcador=2;
-			if(año>=2100 && año<=2199)
+			if(ano>=2100 && ano<=2199)
 				marcador=0;
 
 
-			var ultimosDigitos=año % 100;
+			var ultimosDigitos=ano % 100;
 			var doomsday1=Math.floor((Math.floor(ultimosDigitos/12)+ultimosDigitos%12+Math.floor((ultimosDigitos%12)/4))%7)+marcador;
 			var doomsday=doomsday1%7;
-			/*el 4/4,6/6,8/8,10/10,12/12 de cada año son doomsday
+			/*el 4/4,6/6,8/8,10/10,12/12 de cada ano son doomsday
 				9/5,11/7,5/9,7/11
 				ultimo dia de febrero
 				4 de enero en bisiesto y 3 el resto*/
-			if(esBisiesto(año)==true){
+			if(esBisiesto(ano)==true){
 				if(mesNum==0){
-					var dia2=new Date(año,0,4);
+					var dia2=new Date(ano,0,4);
 					}
 				if(mesNum==1||mesNum==2){
-					dia2=new Date(año,1,29);
+					dia2=new Date(ano,1,29);
 					}
 				}
 			//si no es bisiesto
 			else{
-				if(mesNum==0)){
-					dia2=new Date(año,0,3);
+				if(mesNum==0){
+					dia2=new Date(ano,0,3);
 					}
 				if(mesNum==1||mesNum==2){
-					dia2=new Date(año,1,28);
+					dia2=new Date(ano,1,28);
 					}
 				}
 			if(mesNum==3){
-				dia2=new Date(año,3,4);
+				dia2=new Date(ano,3,4);
 				}
 			if(mesNum==4){
-				dia2=new Date(año,4,9);
+				dia2=new Date(ano,4,9);
 				}
 			if(mesNum==5){
-				dia2=new Date(año,5,6);
+				dia2=new Date(ano,5,6);
 				}
 			if(mesNum==6){
-				dia2=new Date(año,6,11);
+				dia2=new Date(ano,6,11);
 				}
 			if(mesNum==7){
-				dia2=new Date(año,7,8);
+				dia2=new Date(ano,7,8);
 				}
 			if(mesNum==8){
-				dia2=new Date(año,8,5);
+				dia2=new Date(ano,8,5);
 				}
 			if(mesNum==9){
-				dia2=new Date(año,9,10);
+				dia2=new Date(ano,9,10);
 				}
 			if(mesNum==10){
-				dia2=new Date(año,10,7);
+				dia2=new Date(ano,10,7);
 				}
-				dia2=new Date(año,11,12);
+			if(mesNum==11){
+				dia2=new Date(ano,11,12);
 				}
 			var tiempo=dia1.getTime()-dia2.getTime();
-
 			var dias=((tiempo/1000)/3600)/24;
 
 			var diaDeLaSemana=(doomsday+dias)%7;
-
-			alert("El "+ dia +" de "+ mesNum+" de "+año+" era: "+ semana[diaDeLaSemana]);
-
-
+			var hoy=new Date();
+			if (dia1.getTime()< hoy.getTime())
+			alert("El "+ dia +" de "+ mesNum+" de "+ano+" era: "+ semana[diaDeLaSemana]);
+			else
+			alert("El "+ dia +" de "+ mesNum+" de "+ano+" sera: "+ semana[diaDeLaSemana]);
 		</script>
 	</body>
 </html>
