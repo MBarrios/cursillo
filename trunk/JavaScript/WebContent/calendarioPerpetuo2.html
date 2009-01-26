@@ -51,8 +51,9 @@
 
 
 			var ultimosDigitos=ano % 100;
-			var doomsday1=Math.floor((Math.floor(ultimosDigitos/12)+ultimosDigitos%12+Math.floor((ultimosDigitos%12)/4))%7)+marcador;
-			var doomsday=doomsday1%7;
+			/*var doomsday1=Math.floor((Math.floor(ultimosDigitos/12)+ultimosDigitos%12+Math.floor((ultimosDigitos%12)/4))%7)+marcador;
+			var doomsday=doomsday1%7;*/
+			var doomsday=marcador+ultimosDigitos+Math.floor(ultimosDigitos/4)-Math.floor(ultimosDigitos/100)+Math.floor(ultimosDigitos/400);
 			/*el 4/4,6/6,8/8,10/10,12/12 de cada ano son doomsday
 				9/5,11/7,5/9,7/11
 				ultimo dia de febrero
