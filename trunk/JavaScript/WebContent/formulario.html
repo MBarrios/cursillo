@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3g.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+	<head>
+		<title>Mi pagina</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="estilo1.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<form action="mailto:airizar@gmail.com">
+		<p>
+			<label for="nombre">Nombre:</label>
+			<input type="text" name="nombre" class="alinear" /><br />
+			 <label for="direccion">Direccion:</label><br />
+			<textarea name="direccion" class="alinear" cols="25" rows="2"></textarea><br />
+
+			<label for="nusuario">nº usuario:</label>
+			<input type="text" name="nusuario" class="alinear" /><br />
+
+			<label for="pass">Contraseña:</label>
+			<input type="password" name="pass" class="alinear" /><br />
+
+			<label for="pueblo">Población:</label><br />
+			<input type="radio" name="pueblo" />Tolosa
+			<input type="radio" name="pueblo" />Irun
+			<input type="radio" name="pueblo" />Beasain
+			<input type="radio" name="pueblo" />Donostia<br />
+			<label for="ocupacion">Ocupación</label>
+			<select>
+				<option>Estudiante</option>
+				<option>Trabajador</option>
+				<option>En paro</option>
+				<option>Juvilado</option>
+			</select><br />
+
+			<label for="hobbys1">Hobbys</label><br />
+			<input type="checkbox" name="hobbys1" />Deporte
+			<input type="checkbox" name="hobbys2" />Cine
+			<input type="checkbox" name="hobbys3" />Lectura<br />
+			<input type="submit" />
+			<input type="reset" />
+		</p>
+		</form>
+	</body>
+</html>
