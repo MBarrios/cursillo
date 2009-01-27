@@ -50,12 +50,11 @@ form{
 	background-color:olive;
 }
 .alinear{
-  margin-left:100px;
-  display:block;
-  border: 1px solid blue;
+  margin-left:150px;
+display:block;
 }
+label{
+	display:block;
+	float: left;
+	}
 
-.alinear * {
-  horizontanl-aling:middle;
-  border: 1px solid red;
-}
