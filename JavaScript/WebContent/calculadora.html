@@ -19,10 +19,6 @@
 			numero=document.getElementById('pant').value;
 			}
 		else{
-			if(otraOp==false)
-				numero=total;
-			document.write("numero "+numero+"<br />");
-			document.write("total "+total+"<br />");
 			limpiarTextBox();
 			document.getElementById('pant').value=document.getElementById('pant').value+num;
 			numero2=document.getElementById('pant').value;
@@ -52,7 +48,6 @@
 			numero2=null;
 			otraOp=true;
 			total=document.getElementById('pant').value;
-			document.write("total fin "+total+"<br />");
 		}
 		</script>
 	</head>
