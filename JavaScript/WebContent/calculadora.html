@@ -4,38 +4,86 @@
 	<head>
 		<title>Mi pagina</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link href="estilo.css" rel="stylesheet" type="text/css" />
+		<link href="estiloCalc.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
+		var numero,numero2;
+		var op;
+		var  hayOperacion=false;
+		var otraOp=false;
+		var total;
 		function insertarNumero(num){
+		if(otraOp==true)
+			limpiarTextBox();
+		if(hayOperacion==false){
 			document.getElementById('pant').value=document.getElementById('pant').value+num;
+			numero=document.getElementById('pant').value;
+			}
+		else{
+			if(otraOp==false)
+				numero=total;
+			document.write("numero "+numero+"<br />");
+			document.write("total "+total+"<br />");
+			limpiarTextBox();
+			document.getElementById('pant').value=document.getElementById('pant').value+num;
+			numero2=document.getElementById('pant').value;
+			}
 		}
-		function guardarNumeroSigno(numero,sig){
-			var x=parseInt(numero);
+		function guardarOp(operacion){
+			op=operacion;
+			hayOperacion=true;
+			otraOp=false;
 		}
 		function limpiarTextBox(){
-		document.getElementById('pant').value="";
+			document.getElementById('pant').value="";
 		}
-
+		function resultado(){
+			hayOperacion=false;
+			if(numero!=null && numero2!=null){
+				if(op=="+")
+					document.getElementById('pant').value=eval(numero + op  +numero2);
+				if(op=="-")
+					document.getElementById('pant').value=eval(numero + op  +numero2);
+				if(op=="*")
+					document.getElementById('pant').value=eval(numero + op  +numero2);
+				if(op=="/")
+					document.getElementById('pant').value=eval(numero + op  +numero2);
+					}
+			numero=null;
+			numero2=null;
+			otraOp=true;
+			total=document.getElementById('pant').value;
+			document.write("total fin "+total+"<br />");
+		}
 		</script>
 	</head>
 	<body>
-	<p>
-		<input type="text" id="pant" name="pant" />
-		<input type="button"  name="1" value="1" onclick="insertarNumero(1);" />
-		<input type="button"  value="2"  onclick="insertarNumero(2);" />
-		<input type="button"  value="3"  onclick="insertarNumero(3);" />
-		<input type="button"  value="4" onclick="insertarNumero(4);" />
-		<input type="button"  value="5"  onclick="insertarNumero(5);" />
-		<input type="button"  value="6"  onclick="insertarNumero(6);" />
-		<input type="button"  value="7" onclick="insertarNumero(7);" />
-		<input type="button"  value="8"  onclick="insertarNumero(8);" />
-		<input type="button"  value="9"  onclick="insertarNumero(9);" />
-		<input type="button"  value="0" onclick="insertarNumero(0);" />
-		<input type="button"  value="+"  onclick="limpiarTextBox();" />
-		<input type="button"  value="-"  onclick=";" />
-		<input type="button"  value="*" onclick=";" />
-		<input type="button"  value="/"  onclick=";" />
-		<input type="button"  value="="  onclick=";" />
-		</p>
+		<div id="general">
+			<input type="text" id="pant" name="pant" />
+			<div class="botones">
+				<input type="button"  name="1" value="1" onclick="insertarNumero(1);" />
+				<input type="button"  value="2"  onclick="insertarNumero(2);" />
+				<input type="button"  value="3"  onclick="insertarNumero(3);" />
+			</div>
+			<div class="botones">
+				<input type="button"  value="4" onclick="insertarNumero(4);" />
+				<input type="button"  value="5"  onclick="insertarNumero(5);" />
+				<input type="button"  value="6"  onclick="insertarNumero(6);" />
+			</div>
+			<div class="botones">
+				<input type="button"  value="7" onclick="insertarNumero(7);" />
+				<input type="button"  value="8"  onclick="insertarNumero(8);" />
+				<input type="button"  value="9"  onclick="insertarNumero(9);" />
+				</div>
+			<div class="botones">
+				<input type="button"  value="0" onclick="insertarNumero(0);" />
+			</div>
+			<div id="operaciones" class="botones">
+				<input type="button"  value="+"  onclick="guardarOp('+');" />
+				<input type="button"  value="-"  onclick="guardarOp('-');" />
+				<input type="button"  value="*" onclick="guardarOp('*');" />
+				<input type="button"  value="/"  onclick="guardarOp('/');" />
+				<input type="button"  value="="  onclick="resultado();" />
+			</div>
+		</div>
 	</body>
 </html>
