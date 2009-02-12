@@ -30,12 +30,7 @@
     echo "<div id='col1'class='col'>";
     echo "<span class='atrib'>Concepto</span><br />";
 	foreach($datos_factura as $pedido){
-		echo $pedido[1];
-		$long=strlen($pedido[1]);
-		for($i=$long;$i<98;$i++)
-			echo "_";
-		echo "<br />";
-
+		echo "<span id='concepto'>$pedido[1]</span><br />";
 	}
 	 echo "<span>Total sin iva</span><br />";
 	 echo "<span>IVA 16%</span><br />";
@@ -46,7 +41,7 @@
 	 echo "<div id='col2'class='col'>";
     echo "<span class='atrib'>Unidades</span><br />";
 	foreach($datos_factura as $pedido){
-		echo "$pedido[0]<br />";
+		echo "<span id='unidades'>$pedido[0]</span><br />";
 	}
 
 	 //final col2
@@ -57,7 +52,7 @@
 	foreach($datos_factura as $pedido){
 		$total_prod=$pedido[0]*$pedido[2];
 		$total=$total+$total_prod;
-		echo $total_prod."<br />";
+		echo "<span id='totales'>".$total_prod."</span><br />";
 	}
 	echo "<span class=tot>$total</span><br />";
 	echo "<span class=tot>$total*0.16</span><br />";
