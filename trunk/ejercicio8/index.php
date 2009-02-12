@@ -10,8 +10,13 @@
     <div id="general">
       <div id="cabecera">
         <div id="dcha">
-          <h3>Factura</h3>
-            <p>n: 23244</p>
+
+          <div id="datos_empresa">nombre empresa<br />
+          	 direccion enpresa<br />
+          	 23453 poblacion<br />
+          	 provincia<br />
+          <h4>Factura n: 23244</h4></div>
+		<div id="imagen"></div>
         </div>
         <div id="datos_cliente">
     <?php
@@ -54,9 +59,10 @@
 		$total=$total+$total_prod;
 		echo "<span id='totales'>".$total_prod."</span><br />";
 	}
-	echo "<span class=tot>$total</span><br />";
-	echo "<span class=tot>$total*0.16</span><br />";
-	echo "<span class=tot>$total+$total*0.16</span>";
+	echo "<span class=tot>".$total."</span><br />";
+	echo "<span class=tot>".$total*0.16."</span><br />";
+	$total=$total+($total*0.16);
+	echo "<span class=tot>$total</span>";
 	//final col3
 	echo "</div>";
 
