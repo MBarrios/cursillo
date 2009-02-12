@@ -32,7 +32,6 @@ padding-top: 10px;
 	}
 .col{
 float: left;
-line-height: 40px;
 text-align:right;
 }
 #col3{
@@ -55,13 +54,26 @@ span{
 
 }
 .tot{
-	font-weight: normal;
+
 }
 .atrib{
+	display:block;
 text-decoration: underline;
 text-transform: uppercase;
 }
 #pie{
 	width: 800px;
 	clear: both;
+}
+#concepto{
+	display: block;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+width: 770px;
+	font-weight: normal;
+
+}
+#totales,#unidades{
+display: block;
+	font-weight: normal;
 }
