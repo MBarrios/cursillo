@@ -1,3 +1,45 @@
+/* Padding y margin */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input,/* p, */blockquote, th, td {
+margin: 0;
+padding: 0;
+}
+
+/* Tamaños de los headers */
+h1, h2, h3, h4, h5, h6 {
+font-size: 100%;
+}
+
+/* Estilos de las listas
+ol, ul {
+list-style: none;
+}*/
+
+/* Estilo y grosor de las fuentes */
+address, caption, cite, code, dfn, em, strong, th, var {
+font-style: normal;
+font-weight: normal;
+}
+
+/* Bordes de las tablas */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* Otros bordes */
+fieldset, img {
+border: 0;
+}
+
+/* Alineacón del texto */
+caption, th {
+text-align: left;
+}
+
+/* Comillas */
+q:before, q:after {
+content: ”;
+}
 #general{
 width: 800px;
 
@@ -22,7 +64,7 @@ border-color: red;
 	padding-left: 10px;
 }
 #datos_cliente{
-	width: 400px;
+	width: 340px;
 		height:90px;
 	margin-left: 400px;
 	text-align:left;
