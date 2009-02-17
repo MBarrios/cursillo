@@ -18,39 +18,28 @@
 			    <li><a href="insertar.php">Insertar</a>|</li>
 			    <li><a href="eliminar.php">Eliminar</a>|</li>
 			    <li><a href="modificar.php">Modificar</a></li>
-			  </ul>
 
+			  </ul>
 			</div>
 			<!--inicio CUERPO-->
 			<div id="cuerpo">
-				<div id="titulo"><h3>HOME > Paises</h3></div>
+				<div id="titulo"><h3>BUSCADOR</h3></div>
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
-				<?php
-					if (!mysql_connect("localhost","root",""))
-						die(mysql_error ());
+					<p>Insertar el nombre o la/s inicial/es de un continente, y población</p>
+					<form action="buscar_combinado2.php" method="get">
+						<input type="text" name="pais" id="pais" size="40" maxlength="40" />
 
-					if (!mysql_select_db("paises"))
-						die (mysql_error ());
-				$sql="Select pais_nombre,pais_poblacion,continente_nombre from pais inner join continente on continente=continente_id order by continente_nombre,pais_nombre";
-				$resultado=mysql_query($sql);
-					echo "<table>";
-					echo "<thead>";
-					echo "<th>País</th>";
-					echo "<th>Población</th>";
-					echo "<th>Continente</th>";
-					echo "</thead><tbody>";
-					while($fila=mysql_fetch_array($resultado))
-						{echo "<tr>";
-							echo "<td>".$fila["pais_nombre"]."</td>";
-							echo "<td>".number_format($fila["pais_poblacion"],"",",",".")." hab.</td>";
-							echo "<td>".$fila["continente_nombre"]."</td>";
-						echo "</tr>";
-						}
-					echo "</tbody>";
-					mysql_free_result($resultado);
-					mysql_close();
-				?>
+						  <select name="poblacion" id="poblacion">
+						    <option value="1">Indiferente</option>
+						    <option value="2">1 mill - 5 mill</option>
+						    <option value="3">5 mill - 10 mill</option>
+						    <option value="4">10 mill - 30 mill</option>
+						    <option value="5">30 mill - 50 mill</option>
+						    <option value="6">+ 50 mill</option>
+						  </select>
+						<input type="submit" name="buscar" id="buscar" />
+				</form>
 				<!--fin CONTENIDO-->
 				</div>
 				<!--fin CUERPO-->

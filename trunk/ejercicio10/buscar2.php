@@ -27,29 +27,32 @@
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
 				<?php
+
+				$pais=$_GET["pais"];
+				echo $pais;
 					if (!mysql_connect("localhost","root",""))
 						die(mysql_error ());
 
 					if (!mysql_select_db("paises"))
 						die (mysql_error ());
-				$sql="Select pais_nombre,pais_poblacion,continente_nombre from pais inner join continente on continente=continente_id order by continente_nombre,pais_nombre";
+				$sql="Select pais_nombre,continente_nombre from pais inner join continente on continente=continente_id where pais_nombre like "."'".$pais."%'";
 				$resultado=mysql_query($sql);
+				echo "antes de imprimir resultado";
+
+				print_r($resultado);
 					echo "<table>";
 					echo "<thead>";
 					echo "<th>País</th>";
-					echo "<th>Población</th>";
 					echo "<th>Continente</th>";
 					echo "</thead><tbody>";
 					while($fila=mysql_fetch_array($resultado))
 						{echo "<tr>";
 							echo "<td>".$fila["pais_nombre"]."</td>";
-							echo "<td>".number_format($fila["pais_poblacion"],"",",",".")." hab.</td>";
 							echo "<td>".$fila["continente_nombre"]."</td>";
 						echo "</tr>";
 						}
 					echo "</tbody>";
-					mysql_free_result($resultado);
-					mysql_close();
+
 				?>
 				<!--fin CONTENIDO-->
 				</div>
