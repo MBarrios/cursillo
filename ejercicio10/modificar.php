@@ -18,39 +18,26 @@
 			    <li><a href="insertar.php">Insertar</a>|</li>
 			    <li><a href="eliminar.php">Eliminar</a>|</li>
 			    <li><a href="modificar.php">Modificar</a></li>
-			  </ul>
 
+			  </ul>
 			</div>
 			<!--inicio CUERPO-->
 			<div id="cuerpo">
-				<div id="titulo"><h3>HOME > Paises</h3></div>
+				<div id="titulo"><h3>MODIFICAR > Datos de un pais 1/3</h3></div>
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
-				<?php
-					if (!mysql_connect("localhost","root",""))
-						die(mysql_error ());
+					<p>Modificar el nombre de pais o su cifra de población</p>
+					<form action="" method="get">
+						<input type="text" name="pais" id="pais" size="40" maxlength="40" />
 
-					if (!mysql_select_db("paises"))
-						die (mysql_error ());
-				$sql="Select pais_nombre,pais_poblacion,continente_nombre from pais inner join continente on continente=continente_id order by continente_nombre,pais_nombre";
-				$resultado=mysql_query($sql);
-					echo "<table>";
-					echo "<thead>";
-					echo "<th>País</th>";
-					echo "<th>Población</th>";
-					echo "<th>Continente</th>";
-					echo "</thead><tbody>";
-					while($fila=mysql_fetch_array($resultado))
-						{echo "<tr>";
-							echo "<td>".$fila["pais_nombre"]."</td>";
-							echo "<td>".number_format($fila["pais_poblacion"],"",",",".")." hab.</td>";
-							echo "<td>".$fila["continente_nombre"]."</td>";
-						echo "</tr>";
-						}
-					echo "</tbody>";
-					mysql_free_result($resultado);
-					mysql_close();
-				?>
+						  <select name="name">
+						    <option value="value1">option1</option>
+						    <option value="value2">option2</option>
+						    <option value="value3">option3</option>
+						  </select>
+
+						<input type="button" name="buscar" value="Buscar" id="buscar" />
+				</form>
 				<!--fin CONTENIDO-->
 				</div>
 				<!--fin CUERPO-->
