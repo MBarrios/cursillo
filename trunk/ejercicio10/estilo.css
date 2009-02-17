@@ -6,10 +6,18 @@ body{
   width:800px;
   margin: 0px auto;
   }
-#cebecera{
-  width:780px;
-  height:157px;
+#cabecera{
+  width:800px;
+  height:167px;
   background-image: url("cabecera.jpg");
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   }
+ ul{
+    list-style: none;
+    background-color: #95b48b;
+    }
+ li{
+ 	display: block;
+ 	float: left;
+ 	}
