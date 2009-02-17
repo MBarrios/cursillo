@@ -9,7 +9,7 @@
 	<body>
 		<div id="general">
 			<div id="cabecera">
-			  <ul>
+		  <ul>
 			    <li><a href="">Home    </a>|</li>
 			    <li><a href="">    Buscar    </a>|</li>
 			    <li><a href="">    Buscar combinado    </a>|</li>
