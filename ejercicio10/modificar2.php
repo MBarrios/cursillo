@@ -23,30 +23,31 @@
 			</div>
 			<!--inicio CUERPO-->
 			<div id="cuerpo">
-				<div id="titulo"><h3>ELIMINAR > Pais 1/2</h3></div>
+				<div id="titulo"><h3>MODIFICAR > Pais 2/3</h3></div>
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
-					<p>Insertar el nombre o la/s inicial/es de un continente, y población</p>
-					<form action="eliminar2.php" method="get">
-						<label for="pais">Elije un pais para eliminar</label>
-
-						  <select name="pais" id="pais">
-							<?php
-								$pais=$_GET["pais"];
+					<p>Modificar el nombre del pais o su cifra de poblacion:</p>
+					<form action="modificar3.php" method="get">
+						<label for="pais">Nombre pais</label>
+						<?php
+							$pais=$_GET["pais_nom"];
 								if (!mysql_connect("localhost","root",""))
 									die(mysql_error ());
 
 								if (!mysql_select_db("paises"))
 									die (mysql_error ());
-								$sql="Select distinct pais_nombre from pais";
-								$resultado=mysql_query($sql);
-								while($fila=mysql_fetch_array($resultado))
+							$sql="select pais_nombre,pais_poblacion,pais_id from pais where pais_nombre='".$pais."'";
+							$resultado=mysql_query($sql);
+							while($fila=mysql_fetch_array($resultado)){
+							echo "<input type='text' name='pais' id='pais' value='".$fila["pais_nombre"]."' /><br />";
 
-						    echo "<option value=".$fila["pais_nombre"].">".$fila["pais_nombre"]."</option>";
-							?>
-						  </select>
-
-						<input type="submit" name="buscar" value="Buscar" id="buscar" />
+						echo "<label for='poblacion'>Poblacion</label>";
+						echo "<input type='text' name='poblacion' id='poblacion' value=".$fila["pais_poblacion"]." /><br />";
+						echo "<input type='hidden' name='id_pais' id='id_pais' value=".$fila["pais_id"]." />";
+						echo "<input type='hidden' name='pais_sin_cambio' id='pais_sin_cambio' value=".$fila["pais_nombre"]." />";
+							}
+						?>
+						<input type="submit" name="Insertar" value="Buscar" id="buscar" />
 				</form>
 				<!--fin CONTENIDO-->
 				</div>

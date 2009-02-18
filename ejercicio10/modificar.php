@@ -27,16 +27,26 @@
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
 					<p>Modificar el nombre de pais o su cifra de población</p>
-					<form action="" method="get">
-						<input type="text" name="pais" id="pais" size="40" maxlength="40" />
+					<form action="modificar2.php" method="get">
+						<label for="pais">Elige un pais para modificar</label>
 
-						  <select name="name">
-						    <option value="value1">option1</option>
-						    <option value="value2">option2</option>
-						    <option value="value3">option3</option>
+						  <select name="pais_nom" id="pais_nom">
+						   <?php
+								$pais=$_GET["pais_nom"];
+								if (!mysql_connect("localhost","root",""))
+									die(mysql_error ());
+
+								if (!mysql_select_db("paises"))
+									die (mysql_error ());
+								$sql="Select distinct pais_nombre from pais";
+								$resultado=mysql_query($sql);
+								while($fila=mysql_fetch_array($resultado))
+
+						    echo "<option value=".$fila["pais_nombre"].">".$fila["pais_nombre"]."</option>";
+							?>
 						  </select>
 
-						<input type="button" name="buscar" value="Buscar" id="buscar" />
+						<input type="submit" name="buscar" value="Buscar" id="buscar" />
 				</form>
 				<!--fin CONTENIDO-->
 				</div>

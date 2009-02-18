@@ -18,36 +18,32 @@
 			    <li><a href="insertar.php">Insertar</a>|</li>
 			    <li><a href="eliminar.php">Eliminar</a>|</li>
 			    <li><a href="modificar.php">Modificar</a></li>
-
 			  </ul>
+
 			</div>
 			<!--inicio CUERPO-->
 			<div id="cuerpo">
-				<div id="titulo"><h3>ELIMINAR > Pais 1/2</h3></div>
+				<div id="titulo"><h3>ELIMINAR 2/2</h3></div>
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
-					<p>Insertar el nombre o la/s inicial/es de un continente, y población</p>
-					<form action="eliminar2.php" method="get">
-						<label for="pais">Elije un pais para eliminar</label>
+				<?php
 
-						  <select name="pais" id="pais">
-							<?php
-								$pais=$_GET["pais"];
-								if (!mysql_connect("localhost","root",""))
-									die(mysql_error ());
+				$pais=$_GET["pais"];
+				echo $pais;
+					if (!mysql_connect("localhost","root",""))
+						die(mysql_error ());
 
-								if (!mysql_select_db("paises"))
-									die (mysql_error ());
-								$sql="Select distinct pais_nombre from pais";
-								$resultado=mysql_query($sql);
-								while($fila=mysql_fetch_array($resultado))
-
-						    echo "<option value=".$fila["pais_nombre"].">".$fila["pais_nombre"]."</option>";
-							?>
-						  </select>
-
-						<input type="submit" name="buscar" value="Buscar" id="buscar" />
-				</form>
+					if (!mysql_select_db("paises"))
+						die (mysql_error ());
+				$sql="Select pais_nombre from pais where pais_nombre='".$pais."'";
+				$resultado=mysql_query($sql);
+				if($resultado>0){
+					$sql="delete from pais where pais_nombre='".$pais."'";
+					$resultado=mysql_query($sql);
+					if($resultado>0)
+						echo "El pais seleccionado $pais a sido eliminado de la base de datos";
+					}
+				?>
 				<!--fin CONTENIDO-->
 				</div>
 				<!--fin CUERPO-->
