@@ -47,7 +47,7 @@
 						echo "<input type='hidden' name='pais_sin_cambio' id='pais_sin_cambio' value=".$fila["pais_nombre"]." />";
 							}
 						?>
-						<input type="submit" name="Insertar" value="Buscar" id="buscar" />
+						<input type="submit" name="Insertar" value="Modifcar" />
 				</form>
 				<!--fin CONTENIDO-->
 				</div>

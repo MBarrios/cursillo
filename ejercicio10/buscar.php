@@ -29,7 +29,7 @@
 					<p>Insertar el nombre o la/s inicial/es de un pais</p>
 					<form action="buscar2.php" method="get">
 						<input type="text" name="pais" id="pais" size="40" maxlength="40" />
-						<input type="submit" name="buscar" id="buscar" />
+						<input type="submit" name="buscar" value="Buscar" />
 				</form>
 				<!--fin CONTENIDO-->
 				</div>

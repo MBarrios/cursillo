@@ -46,7 +46,7 @@
 							?>
 						  </select>
 
-						<input type="submit" name="buscar" value="Buscar" id="buscar" />
+						<input type="submit" name="buscar" value="Modificar" />
 				</form>
 				<!--fin CONTENIDO-->
 				</div>

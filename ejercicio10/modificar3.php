@@ -40,7 +40,7 @@
 						die (mysql_error ());
 				$sql="update pais set pais_nombre='".$pais."', pais_poblacion=".$poblacion." where pais_id=".$id."";
 				$resultado=mysql_query($sql);
-				if ($resultado>0){
+				if(mysql_affected_rows()>0){
 					echo "Los datos de - $pais_sin_cambio - han sido modificados, gracias";
 				}
 				?>

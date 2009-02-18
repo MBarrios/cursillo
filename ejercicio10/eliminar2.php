@@ -29,7 +29,6 @@
 				<?php
 
 				$pais=$_GET["pais"];
-				echo $pais;
 					if (!mysql_connect("localhost","root",""))
 						die(mysql_error ());
 
@@ -40,8 +39,8 @@
 				if($resultado>0){
 					$sql="delete from pais where pais_nombre='".$pais."'";
 					$resultado=mysql_query($sql);
-					if($resultado>0)
-						echo "El pais seleccionado $pais a sido eliminado de la base de datos";
+					if(mysql_affected_rows()>0)
+						echo "El pais seleccionado, $pais, a sido eliminado de la base de datos";
 					}
 				?>
 				<!--fin CONTENIDO-->

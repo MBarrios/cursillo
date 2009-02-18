@@ -27,27 +27,31 @@
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
 					<p>Insertar un nuevo continente</p>
-					<form action="" method="get">
-						<label for="pais">Nuevo continente</label>
-						<input type="text" name="pais" id="pais" size="40" maxlength="40" />
-						<input type="submit" name="Insertar" value="Buscar" id="buscar" />
-				</form>
-				<?php
-				$continente=$_GET["pais"];
-					if (!mysql_connect("localhost","root",""))
-						die(mysql_error ());
+					<?php
+					if (!$_GET){
+					    echo "<form action='insertar.php' method='get'>";
+							echo "<label for='continente'>Nuevo continente</label>";
+							echo "<input type='text' name='continente' id='continente' size='40' maxlength='40' />";
+							echo "<input type='submit' name='Insertar' value='Insertar' id='buscar' />";
+						echo "</form>";
+					}
+					else{
+					$continente=$_GET["continente"];
+						if (!mysql_connect("localhost","root",""))
+							die(mysql_error ());
 
-					if (!mysql_select_db("paises"))
-						die (mysql_error ());
-				$sql="select * from continente where continente_nombre='".$continente."'";
-				$resultado=mysql_query($sql);
-				if ($resultado>0){
-				$sql="insert into continente (continente_nombre)  values('".$continente."')";
-				$resultado=mysql_query($sql);
-					if ($resultado>0)
-						echo $continente." se ha creado correctamente en la base de datos";
-				}
-				?>
+						if (!mysql_select_db("paises"))
+							die (mysql_error ());
+					$sql="select * from continente where continente_nombre='".$continente."'";
+					$resultado=mysql_query($sql);
+					if(mysql_affected_rows()>0){
+					$sql="insert into continente (continente_nombre)  values('".$continente."')";
+					$resultado=mysql_query($sql);
+						if(mysql_affected_rows()>0)
+							echo $continente." se ha creado correctamente en la base de datos";
+					}
+					}
+					?>
 				<!--fin CONTENIDO-->
 				</div>
 				<!--fin CUERPO-->
