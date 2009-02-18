@@ -23,31 +23,27 @@
 			</div>
 			<!--inicio CUERPO-->
 			<div id="cuerpo">
-				<div id="titulo"><h3>ELIMINAR > Pais 1/2</h3></div>
+				<div id="titulo"><h3>MODIFICAR > Pais 3/3</h3></div>
 				<!--inicio CONTENIDO-->
 				<div id="contenido">
-					<p>Insertar el nombre o la/s inicial/es de un continente, y población</p>
-					<form action="eliminar2.php" method="get">
-						<label for="pais">Elije un pais para eliminar</label>
+					<p>Modificar el nombre del pais o su cifra de poblacion:</p>
 
-						  <select name="pais" id="pais">
-							<?php
-								$pais=$_GET["pais"];
-								if (!mysql_connect("localhost","root",""))
-									die(mysql_error ());
+				<?php
+				$pais=$_GET["pais"];
+				$poblacion=$_GET["poblacion"];
+				$pais_sin_cambio=$_GET["pais_sin_cambio"];
+				$id=$_GET["id_pais"];
+					if (!mysql_connect("localhost","root",""))
+						die(mysql_error ());
 
-								if (!mysql_select_db("paises"))
-									die (mysql_error ());
-								$sql="Select distinct pais_nombre from pais";
-								$resultado=mysql_query($sql);
-								while($fila=mysql_fetch_array($resultado))
-
-						    echo "<option value=".$fila["pais_nombre"].">".$fila["pais_nombre"]."</option>";
-							?>
-						  </select>
-
-						<input type="submit" name="buscar" value="Buscar" id="buscar" />
-				</form>
+					if (!mysql_select_db("paises"))
+						die (mysql_error ());
+				$sql="update pais set pais_nombre='".$pais."', pais_poblacion=".$poblacion." where pais_id=".$id."";
+				$resultado=mysql_query($sql);
+				if ($resultado>0){
+					echo "Los datos de - $pais_sin_cambio - han sido modificados, gracias";
+				}
+				?>
 				<!--fin CONTENIDO-->
 				</div>
 				<!--fin CUERPO-->
