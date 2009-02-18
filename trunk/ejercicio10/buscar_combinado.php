@@ -38,7 +38,7 @@
 						    <option value="5">30 mill - 50 mill</option>
 						    <option value="6">+ 50 mill</option>
 						  </select>
-						<input type="submit" name="buscar" id="buscar" />
+						<input type="submit" name="buscar" value="Buscar" />
 				</form>
 				<!--fin CONTENIDO-->
 				</div>

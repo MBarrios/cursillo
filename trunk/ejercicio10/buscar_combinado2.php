@@ -68,7 +68,7 @@
 					$sql="Select pais_nombre,pais_poblacion from pais where  pais_poblacion>5000000";
 				}
 			}
-				echo $pais;
+
 					if (!mysql_connect("localhost","root",""))
 						die(mysql_error ());
 
