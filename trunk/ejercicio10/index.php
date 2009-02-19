@@ -15,7 +15,7 @@
 			    <li><a href="index.php">Home</a>|</li>
 			    <li><a href="buscar.php">Buscar</a>|</li>
 			    <li><a href="buscar_combinado.php">Buscar combinado</a>|</li>
-			    <li><a href="insertar.php">Insertar</a>|</li>
+			    <li><a href="insert.php">Insertar</a>|</li>
 			    <li><a href="eliminar.php">Eliminar</a>|</li>
 			    <li><a href="modificar.php">Modificar</a></li>
 			  </ul>
