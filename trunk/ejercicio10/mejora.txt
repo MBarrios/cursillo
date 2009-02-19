@@ -1,0 +1,14 @@
++introducir parte del codigo en includes:
+	-cerrar conexiones
+	+conexion a la base de datos (pasandole los datos necesarios como parametros)
+		-despues de llamar al include (justo despues), llamar a la funcion con los parametros necesarios
+	-cabecera
+	-menu
+	-partes del body.....
+	-fin html (etiquetas de cierre)
+	-pie de pagina
+
+	De esta forma se simplifica los cambios repetitivos que se pueden tener que hacer
+-Utilizar los values de de los option,... se puedan insertar directamente en el select de la sql, es decir, si es
+necesario introducir sentencias de sql esta permitido: value="between 2 and  8"
+-arquitectura  mvc, con plantillas (Smarty)
