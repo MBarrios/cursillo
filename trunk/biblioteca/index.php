@@ -10,6 +10,7 @@
 
 	</head>
 	<body>
+	<!--En el css crear clase para las dos cabeceras-->
 		<!--inicio GENERAL-->
 		<div id="general">
 			<!--inicio CABECERA-->
