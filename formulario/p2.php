@@ -13,7 +13,6 @@
 		if(!isset($_SESSION["intentos"])) {
    			$_SESSION["intentos"] = 0; }
 			$_SESSION["intentos"]++;
-echo "la contraseña es:".$_POST["password"]."<br />";
 		if($_POST["usuario"]=="amaia"&& $_POST["password"]==md5("amaia")){
 			echo $_POST["usuario"]." estas conectado";
 		}
