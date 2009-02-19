@@ -5,6 +5,7 @@
 		<title>Mi pagina</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link href="estilo.css" rel="stylesheet" type="text/css" />
+
 	</head>
 	<body>
 		<?php
@@ -12,9 +13,9 @@
 		if(!isset($_SESSION["intentos"])) {
    			$_SESSION["intentos"] = 0; }
 			$_SESSION["intentos"]++;
-
-		if($_GET["usuario"]=="amaia"&& $_GET["password"]==md5("amaia")){
-			echo $_GET["usuario"]." estas conectado";
+echo "la contraseña es:".$_POST["password"]."<br />";
+		if($_POST["usuario"]=="amaia"&& $_POST["password"]==md5("amaia")){
+			echo $_POST["usuario"]." estas conectado";
 		}
 		else
 			if ($_SESSION["intentos"]<4){
