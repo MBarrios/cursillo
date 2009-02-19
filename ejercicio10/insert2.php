@@ -28,15 +28,18 @@
 				<div id="contenido">
 					<p>Insertar un nuevo continente</p>
 					<?php
-					$continente=$_GET["continente"];
+					if (isset($_GET["Insertar_pais"]))
+						$continente=$_GET["pais_continente"];
+					else $continente=$_GET["continente"];
 					if (!mysql_connect("localhost","root",""))
 									die(mysql_error ());
 
 								if (!mysql_select_db("paises"))
 									die (mysql_error ());
-								$sql="Select * from continente where continente_nombre=''";
+								$sql="Select * from continente where continente_nombre='".$continente."'";
 								$resultado=mysql_query($sql);
 								while($fila=mysql_fetch_array($resultado))
+								   $continente_id=$fila["continente_id"];
 					if (isset($_GET["Insertar_pais"])){
 						//si insertamos un nuevo pais
 					    echo "<form action='insert3.php' method='get'>";
@@ -46,20 +49,21 @@
 							echo "<input type='text' name='poblacion' id='poblacion' size='40' maxlength='40' /><br />";
 							echo "<label for='superficie'>Superficie</label>";
 							echo "<input type='text' name='superficie' id='superficie' size='40' maxlength='40' /><br />";
-							echo "<input type='hidden' name='pais_continente' id='pais_continente' value=".$continente." size='40' maxlength='40' /><br />";
+							echo "<input type='hidden' name='pais_continente' id='pais_continente' value=".$continente_id." size='40' maxlength='40' /><br />";
 							echo "<input type='submit' name='Insertar' value='Insertar' id='buscar' />";
 						echo "</form>";
 
 					}
 					else{
 					//si insertamos un nuevo continente
-					
+
 					if(mysql_affected_rows()==0){
 					$sql="insert into continente (continente_nombre)  values('".$continente."')";
 					$resultado=mysql_query($sql);
 						if(mysql_affected_rows()>0)
 							echo $continente." se ha creado correctamente en la base de datos";
 					}
+					else echo "El continente ya existe";
 					}
 					?>
 				<!--fin CONTENIDO-->

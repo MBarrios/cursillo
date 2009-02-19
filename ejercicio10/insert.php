@@ -34,7 +34,7 @@
 					</form>
 					<form action="insert2.php" method="get">
 						<label for="pais_continente">Nuevo pais</label>
-						<select name="pais_continente" id="pais_continente">
+						<select name="pais_continente" id="pais_continente" />
 							<?php
 								if (!mysql_connect("localhost","root",""))
 									die(mysql_error ());
@@ -46,6 +46,7 @@
 								while($fila=mysql_fetch_array($resultado))
 
 						    echo "<option value=".$fila["continente_nombre"].">".$fila["continente_nombre"]."</option>";
+						
 							?>
 						  </select>
 						<input type="submit" name="Insertar_pais" value="Insertar_pais" />

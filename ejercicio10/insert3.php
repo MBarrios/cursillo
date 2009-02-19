@@ -29,7 +29,6 @@
 					<p>Insertar un nuevo continente</p>
 					<?php
 					$continente=$_GET["pais_continente"];
-
 					$pais=$_GET["nombre"];
 					$poblacion=$_GET["poblacion"];
 					$superficie=$_GET["superficie"];
