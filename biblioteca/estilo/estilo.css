@@ -1,0 +1,113 @@
+/*REINICIAR TODOS LOS VALORES PARA QUE SE VEA IGUAL EN DISTINTOS NAVEGADORES*/
+
+/* Padding y margin */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,
+	/* p, */ blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+
+/* Tamaños de los headers */
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+/* Estilos de las listas
+ol, ul {
+list-style: none;
+}*/ /* Estilo y grosor de las fuentes */
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Bordes de las tablas */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Otros bordes */
+fieldset,img {
+	border: 0;
+}
+
+/* Alineacón del texto */
+caption,th {
+	text-align: left;
+}
+
+/* Comillas */
+q:before,q:after {
+	content: ”;
+}
+
+body{
+	background-color: #cccccc;
+}
+
+#general{
+	width: 800px;
+	border-style:dashed;
+	border-width: 7px;
+	border-color:#cccccc;
+	background-color: #ffffff;
+	margin:0px auto;
+	}
+
+#cabecera{
+	width: 800px;
+	height: 70px;
+	text-align: right;
+	}
+.usuario{
+	background-color: #cc3300;
+	color: #ffffff;
+}
+
+.administrador{
+	background-color: #ffffff;
+	/*mirar el color*/
+	background-color: #cccccc;
+}
+#menu{
+	width: 800px;
+	height: 80px;
+}
+ul{
+	list-style: none
+}
+li{
+	width: 200px;
+	height: 80px;
+	text-align: center;
+	display: block;
+	float: left;
+	color: #ffffff;
+	}
+#opcion1{
+	background-color: #b4b4b4;
+}
+#opcion2{
+	background-color: #a4a4a4;
+}
+#opcion3{
+	background-color: #666666;
+}
+#opcion4{
+	background-color: #5c5c5c;
+}
+#contenido{
+	width: 760px;
+	margin: 20px;
+}
+form{
+	margin: 20px 0px;
+	}
+
+#pie{
+	width: 800px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+}

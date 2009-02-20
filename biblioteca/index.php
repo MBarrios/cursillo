@@ -1,21 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3g.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
-	<head>
-		<title>Mi pagina</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link href="<?php $estilo ?>" rel="stylesheet" type="text/css" />
-		<script language="JavaScript" type="text/javascript" src="md5.js"></script>
+<?php
+	/*definición doctype, head(hoja de estilo), inicio del body y del div general*/
+	include("include/inicioHTML.php");
+	/*cabecera para un usuario sin permisos*/
+	include("include/cabecera_usuario.php");
+	/*menu para un usuario sin permisos e inicio del contenido*/
+	include("include/menu_usuario.php");
+	/*crea la conexion a la base de datos utilizando una funcion*/
+	include("include/crear_conexion.php");
+	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
+	conectar_a("biblioteca2");
+?>
+<?php
+/*si no se a enviado ningun formulario, no se ha echo busqueda*/
+if (!$_POST){
+	?>
+<h4>Buscar por diferentes conceptos</h4>
+<form action="index.php" method="post">
+	<label for="lista_titulos">Titulo</label>
+	<select name="lista_titulos" id="lista_titulos">
+	<!-- consulta para rellenar la lista de titulos-->
+	<?php
+	$sql="select id,titulo,autor from libros";
+	$resultado=mysql_query($sql);
+	while($fila=mysql_fetch_array($resultado)){
+		echo "<option value=".$fila["id"].">".$fila["titulo"]."</option>";
+	 }
+	?>
+	</select>
+	<input type="submit" name="buscar_titulo" id="buscar_titulo" value="Buscar" />
+</form>
+<form action="index.php" method="post">
+	<label for="lista_autores">Autor</label>
+	<select name="lista_autores">
+	<!-- consulta para rellenar la lista de autores-->
+	<?php
+	$sql="select id,titulo,autor from libros";
+	$resultado=mysql_query($sql);
+	while($fila=mysql_fetch_array($resultado)){
+		echo "<option value=".$fila["autor"].">".$fila["autor"]."</option>";
+	 }
+	?>
+	</select>
+	<input type="submit" name="buscar_autor" id="buscar_autor" value="Buscar" />
+</form>
+<form action="index.php" method="post">
+	<label for="lista_editoriales">Editorial</label>
+	<select name="lista_editoriales">
+	<!-- consulta para rellenar la lista de editoriales-->
+	<?php
+	$sql="select * from editoriales";
+	$resultado=mysql_query($sql);
+	while($fila=mysql_fetch_array($resultado)){
+		echo "<option value=".$fila["id_editorial"].">".$fila["editorial"]."</option>";
+	}
+	?>
+	</select>
+	<input type="submit" name="buscar_editorial" id="buscar_editorial" value="Buscar" />
+</form>
+<?php
+}
+/*si se ha "seleccionado" algun tipo de busqueda*/
+else{
+	echo "<h4>Ficha del libro:</h4>";
+	echo "<table border=1>";
+		echo "<thead>";
+		echo "<th>Título</th>";
+		echo "<th>Autor</th>";
+		echo "<th>Páginas</th>";
+		echo "<th>Idioma</th>";
+		echo "<th>CD</th>";
+		echo "<th>Estado</th>";
+		echo "<th>Descripción</th>";
+		echo "<th>Foto</th>";
+		echo "</thead>";
+		echo "<tbody>";
+	/*si la busqueda es por titulo...*/
+	if(isset($_POST["lista_titulos"])){
+		$sql="select * from libros where id='".$_POST["lista_titulos"]."'";
+		include("include/rellenarTablaIndex.php");
+	}
+	else{
+		/*si la busqueda es por autor...*/
+		if(isset($_POST["lista_autores"])){
+			$sql="select * from libros where autor like '".$_POST["lista_autores"]."%'";
+			include("include/rellenarTablaIndex.php");
+	    }
+		else
+			/*si la busqueda es por editoriales...*/
+			if(isset($_POST["lista_editoriales"])){
+				$sql="select * from libros inner join editoriales on libros.id_editorial=editoriales.id_editorial and editoriales.id_editorial='".$_POST["lista_editoriales"]."'";
+				include("include/rellenarTablaIndex.php");
+		 }
+	}
+}
 
-
-	</head>
-	<body>
-	<!--En el css crear clase para las dos cabeceras-->
-		<!--inicio GENERAL-->
-		<div id="general">
-			<!--inicio CABECERA-->
-			<!--fin CABECERA-->
-		<!--fin GENERAL-->
-		</div>
-	</body>
-</html>
+?>
+<!-- fin CONTENIDO-->
+</div>
+<?php
+	include("include/pie.php");
+	include("include/finHTML.php");
+?>
