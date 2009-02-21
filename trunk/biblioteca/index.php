@@ -61,19 +61,9 @@ if (!$_POST){
 }
 /*si se ha "seleccionado" algun tipo de busqueda*/
 else{
+	session_start();
 	echo "<h4>Ficha del libro:</h4>";
-	echo "<table border=1>";
-		echo "<thead>";
-		echo "<th>Título</th>";
-		echo "<th>Autor</th>";
-		echo "<th>Páginas</th>";
-		echo "<th>Idioma</th>";
-		echo "<th>CD</th>";
-		echo "<th>Estado</th>";
-		echo "<th>Descripción</th>";
-		echo "<th>Foto</th>";
-		echo "</thead>";
-		echo "<tbody>";
+	include("include/rellenarCabeceraTablaBusqueda.php");
 	/*si la busqueda es por titulo...*/
 	if(isset($_POST["lista_titulos"])){
 		$sql="select * from libros where id='".$_POST["lista_titulos"]."'";

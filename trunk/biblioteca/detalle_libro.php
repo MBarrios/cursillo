@@ -7,8 +7,10 @@
 	include("include/menu_usuario.php");
 	/*crea la conexion a la base de datos utilizando una funcion*/
 	include("include/crear_conexion.php");
-	session_start();
+	conectar_a("biblioteca2");
+//recogerl valor libro seleccionado
 ?>
+
 	<h4>Ficha del libro:</h4>
 	<table border=1>
 		<tr>
@@ -43,8 +45,7 @@
 		</tr>
 	</table>
 
-  <a href="index.php">volver</a>
-  <!-- el link volver tiene que hacerlo con la consulta-->
+  <a href="javascript:history.back();">volver</a>
 
 <!-- fin CONTENIDO-->
 </div>
