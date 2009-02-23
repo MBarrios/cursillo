@@ -2,7 +2,7 @@
 
 /* Padding y margin */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,
-	/* p, */ blockquote,th,td {
+	/* p, */ blockquote,th,td,textarea {
 	margin: 0;
 	padding: 0;
 }
@@ -74,10 +74,10 @@ body{
 	width: 800px;
 	height: 80px;
 }
-ul{
+#menu ul{
 	list-style: none
 }
-li{
+.listaMenu{
 	width: 200px;
 	height: 80px;
 	text-align: center;
@@ -111,4 +111,7 @@ form{
 	text-align: center;
 	vertical-align: middle;
 }
+#lis{
+	color: #000000;
 
+}
