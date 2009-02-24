@@ -34,7 +34,12 @@ if (!$_POST){
 else{
 	echo "<h4>Ficha del libro:</h4>";
 	include("include/rellenarCabeceraTablaBusqueda.php");
-		$sql="select * from libros where prestado=".$_POST["estado"];
+	    if(!isset($_POST["clave"])){
+			$sql="select * from libros where prestado=".$_POST["estado"];
+	    }
+	    else{
+	    	$sql="select * from libros where prestado=".$_POST["estado"]." and claves like '%".$_POST["clave"]."%'" ;
+	    }
 	include("include/rellenarTablaIndex.php");
 }
 ?>

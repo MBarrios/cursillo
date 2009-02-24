@@ -1,4 +1,5 @@
 <?php
+	include("include/seguridad.php");
 	/*definición doctype, head(hoja de estilo), inicio del body y del div general*/
 	include("include/inicioHTML.php");
 	/*cabecera para un usuario sin permisos*/
@@ -9,6 +10,7 @@
 	include("include/crear_conexion.php");
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
+
 ?>
 <h4>Insertar un nuevo libro</h4>
 <p>Desde el siguiente formulario puede insertar un nuevo libro</p>
