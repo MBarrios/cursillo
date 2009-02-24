@@ -1,4 +1,5 @@
 <?php
+	include("include/seguridad.php");
 	/*definición doctype, head(hoja de estilo), inicio del body y del div general*/
 	include("include/inicioHTML.php");
 	/*cabecera para un usuario sin permisos*/
@@ -9,13 +10,13 @@
 	include("include/crear_conexion.php");
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
+
 	// Subiendo archivo...
 
 if($_FILES["foto"] != null){
-echo $_FILES["foto"]["name"];
-
-
-move_uploaded_file($_FILES["foto"]["tmp_name"], "fotos/minis/".$_FILES["foto"]["name"]);
+$filename= $_FILES["foto"]["name"];
+move_uploaded_file($_FILES["foto"]["tmp_name"], "fotos/grandes/".$_FILES["foto"]["name"]);
+$filename.resizeImage  ( 171  , 213  , "jpg"  , 1);
 }else{
 echo "no !!!";
 }

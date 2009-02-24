@@ -1,4 +1,5 @@
 <?php
+	include("include/seguridad.php");
 	/*definición doctype, head(hoja de estilo), inicio del body y del div general*/
 	include("include/inicioHTML.php");
 	/*cabecera para un usuario sin permisos*/
@@ -9,6 +10,7 @@
 	include("include/crear_conexion.php");
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
+		include("include/seguridad.php");
 	if(!$_GET){
 ?>
 <h4>Insertar nueva editorial</h4>
@@ -24,9 +26,9 @@
 	$sql="select * from editoriales";
 	$resultado=mysql_query($sql);
 
-	echo "<ul>";
+	echo "<ul id='editoriales'>";
 	while($fila=mysql_fetch_array($resultado)){
-		echo "<li id='lis'>".$fila["editorial"]."</li><br />";
+		echo "<li class='lis'>".$fila["editorial"]."</li>";
 	 }
 	echo "</ul>";
 	}
