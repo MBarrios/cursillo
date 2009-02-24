@@ -1,4 +1,5 @@
 <?php
+
 echo "<table border=1>";
 		echo "<thead>";
 		echo "<th>Título</th>";
