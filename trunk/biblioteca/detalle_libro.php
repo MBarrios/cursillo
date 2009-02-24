@@ -9,6 +9,9 @@
 	include("include/crear_conexion.php");
 	conectar_a("biblioteca2");
 //recogerl valor libro seleccionado
+$sql="select * from libros where id='".$_GET["identificador"]."'";
+$resultado=mysql_query($sql);
+		while($fila=mysql_fetch_array($resultado)){
 ?>
 
 	<h4>Ficha del libro:</h4>
@@ -16,32 +19,38 @@
 		<tr>
 
 			<td>Título</td>
-			<td><?php echo $_SESSION["titulo"];?></td>
-			<td  rowspan="7"><img src="fotos/grandes/<?php echo $_SESSION["wfoto"];?>" /></td>
+			<td><?php echo $fila["titulo"];?></td>
+			<td  rowspan="7"><img src="fotos/grandes/<?php echo $fila["wfoto"];?>" /></td>
 		</tr>
 		<tr>
 			<td>Autor</td>
-			<td><?php echo $_SESSION["autor"];?></td>
+			<td><?php echo $fila["autor"];?></td>
 		</tr>
 		<tr>
 			<td>Páginas</td>
-			<td><?php echo $_SESSION["paginas"];?></td>
+			<td><?php echo $fila["paginas"];?></td>
 		</tr>
 		<tr>
 			<td>Idioma</td>
-			<td><?php echo $_SESSION["idioma"];?></td>
+			<td><?php echo $fila["idioma"];?></td>
 		</tr>
 		<tr>
 			<td>CD</td>
-			<td><?php echo $_SESSION["cd"];?></td>
+			<?php if($fila["cd"]==0)
+				echo "<td>No</td>";
+			else
+				echo "<td>Si</td>";?>
 		</tr>
 		<tr>
 			<td>Estado</td>
-			<td><?php echo $_SESSION["estado"];?></td>
+			<?php if($fila["prestado"]==0)
+				echo "<td>No</td>";
+			else
+				echo "<td>Si</td>";?>
 		</tr>
 		<tr>
 			<td>Descripción</td>
-			<td><?php echo $_SESSION["descripcion"];?></td>
+			<td><?php echo $fila["descripcion"];}?></td>
 		</tr>
 	</table>
 
