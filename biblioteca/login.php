@@ -1,4 +1,5 @@
 <?php
+
 	/*definición doctype, head(hoja de estilo), inicio del body y del div general*/
 	include("include/inicioHTML.php");
 	/*cabecera para un usuario sin permisos*/
@@ -9,12 +10,15 @@
 	include("include/crear_conexion.php");
 	conectar_a("biblioteca2");
 	session_start();
+
+
+
 if($_POST){
     $sql="select * from usuarios where usuario='".$_POST["usuario"]."'";
 	$resultado=mysql_query($sql);
 	if(mysql_affected_rows()>0){
 		while($fila=mysql_fetch_array($resultado)){
-		if($_POST["usuario"]==$fila["usuario"] && $_POST["password"]==md5($fila["clave"]))
+		if($_POST["password"]==md5($fila["clave"]))
 			{
 			echo $_POST["usuario"]." estas conectado";
 			//usuario y contraseña válidos
@@ -22,6 +26,10 @@ if($_POST){
    			$_SESSION["autenticado"] = "si";
    			$_SESSION["usuario"] = $_POST["usuario"];
 			$_SESSION["nombreusr"] = $row->nombre . " " . $row->apellido;
+   			if(!isset($_COOKIE["usuario"])){
+   				setcookie("usuario", $_POST["usuario"]);
+           		setcookie("password",$_POST["password"]);
+				}
    			header ("Location: bienvenida.php");
 			}
 		else
@@ -38,12 +46,6 @@ if($_POST){
 <script language="JavaScript" type="text/javascript">
   location.href = 'bienvenida.php'
 </script>
-<?php
-
-?>
-
-
-
 <!-- fin CONTENIDO-->
 </div>
 <?php
