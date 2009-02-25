@@ -10,13 +10,16 @@
 	include("include/crear_conexion.php");
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
-
+include("include/redimensionar.php");
 	// Subiendo archivo...
 
 if($_FILES["foto"] != null){
-$filename= $_FILES["foto"]["name"];
-move_uploaded_file($_FILES["foto"]["tmp_name"], "fotos/grandes/".$_FILES["foto"]["name"]);
-$filename.resizeImage  ( 171  , 213  , "jpg"  , 1);
+
+//move_uploaded_file($_FILES["foto"]["tmp_name"], "fotos/grandes/".$_FILES["foto"]["name"]);
+copy($_FILES["foto"]["tmp_name"], "fotos/grandes/".$_FILES["foto"]["name"]);
+copy($_FILES["foto"]["tmp_name"], "fotos/minis/".$_FILES["foto"]["name"]);
+redimensionar("jpg","fotos/grandes/".$_FILES["foto"]["name"],"fotos/grandes/".$_FILES["foto"]["name"],171,213,95);
+redimensionar("jpg","fotos/minis/".$_FILES["foto"]["name"],"fotos/minis/".$_FILES["foto"]["name"],50,65,95);
 }else{
 echo "no !!!";
 }

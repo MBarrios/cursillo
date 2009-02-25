@@ -10,7 +10,6 @@
 	include("include/crear_conexion.php");
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
-		include("include/seguridad.php");
 	if(!$_GET){
 ?>
 <h4>Insertar nueva editorial</h4>
