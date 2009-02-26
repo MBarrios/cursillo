@@ -11,7 +11,6 @@
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
 include("include/redimensionar.php");
-	// Subiendo archivo...
 
 if($_FILES["foto"] != null){
 
@@ -35,7 +34,7 @@ echo "no !!!";
 <!-- fin CONTENIDO-->
 </div>
 <?php
-include("include/cerrar_conexion.php");
+
 	include("include/pie.php");
 	include("include/finHTML.php");
 ?>
