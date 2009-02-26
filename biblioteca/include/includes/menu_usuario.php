@@ -1,10 +1,22 @@
 <!-- inicio MENU-->
 <div id="menu">
+  <p><a href="index.php">Home</a></p>
+  <h5>-LISTADOS-</H5>
   <ul>
-    <li id="opcion1" class="listaMenu"><a href="index.php">Buscar por diferentes conceptos</a></li>
-    <li id="opcion2" class="listaMenu"><a href="buscar_combinado.php">Buscar opciones combinadas</a></li>
-    <li id="opcion3" class="listaMenu"><a href="modificar_disponibilidad.php">Modificar disponibilidad</a></li>
-    <li id="opcion4" class="listaMenu"><a href="zona_reservada.php">Zona reservada</a></li>
+    <li><a href="peliculas.php">Listado de peliculas</a></li>
+    <li><a href="peliculas_ordenadas.php">Listado de peliculas ordenado</a></li>
+    <li><a href="peliculas_paginado.php">Paginado de peliculas</a></li>
+  </ul>
+  <h5>-INSERTAR-</H5>
+  <ul>
+    <li><a href="genero.php">Insertar genero</a></li>
+    <li><a href="actor.php">Insertar actor</a></li>
+    <li><a href="pelicula.php">Insertar pelicula</a></li>
+  </ul>
+  <h5>-FICHAS-</H5>
+  <ul>
+    <li><a href="ficha.php">ficha de pelicula</a></li>
+
   </ul>
 <!-- fin MENU-->
 </div>
