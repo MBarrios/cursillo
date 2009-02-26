@@ -1,5 +1,5 @@
 <!--inicio CABECERA-->
 <div id="cabecera" class="usuario">
-	<h3>area - Ejercicio BIBLIOTECA</h3>
+	<h1>Patio de Butacas</h1>
 <!--fin CABECERA-->
 </div>
