@@ -1,8 +1,7 @@
 <?php
-/*
- * Created on 26/02/2009
- *
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
+include("includes/inicioHTML.php");
+include("includes/cabecera_usuario.php");
+include("includes/menu_usuario.php");
+include("includes/pie.php");
+include("includes/finHTML.php");
 ?>
