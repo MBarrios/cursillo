@@ -10,7 +10,8 @@
 	include("include/crear_conexion.php");
 	/*llamada a la funcion pasandole como parametro el nombre de la bbdd*/
 	conectar_a("biblioteca2");
-//	include("include/cookie.php");
+include("include/cookie.php");
+	checkCookies("insertar_editorial.php");
 
 	if(!$_GET){
 ?>

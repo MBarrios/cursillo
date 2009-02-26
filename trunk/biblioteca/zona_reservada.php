@@ -1,4 +1,5 @@
 <?php
+
 	/*definición doctype, head(hoja de estilo), inicio del body y del div general*/
 	include("include/inicioHTML.php");
 	/*cabecera para un usuario sin permisos*/
@@ -8,8 +9,8 @@
 	/*crea la conexion a la base de datos utilizando una funcion*/
 	include("include/crear_conexion.php");
 	conectar_a("biblioteca2");
-	include("include/cookie.php");
-	checkCookie("bienvenida.php");
+include("include/cookie.php");
+	checkCookies("bienvenida.php");
 
 ?>
 <h4>Zona reservada</h4>

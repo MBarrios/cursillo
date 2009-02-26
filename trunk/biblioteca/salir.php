@@ -2,5 +2,8 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header("Location: zona_reservada.php");
+//href php
+echo "<a href='index.php'>index</a>";
  ?>
+
+
