@@ -8,7 +8,6 @@
 	include("include/menu_usuario.php");
 	/*crea la conexion a la base de datos utilizando una funcion*/
 	include("include/crear_conexion.php");
-
 	conectar_a("biblioteca2");
 ?>
 <h4>Modificar disponibilidad 1/3</h4>
@@ -27,17 +26,12 @@
 	 }
 	?>
   </select>
-
   <input type="submit" name="buscar" id="buscar" value="Buscar"/>
-
-
   </form>
-
-
 <!-- fin CONTENIDO-->
 </div>
 <?php
-include("include/cerrar_conexion.php");
+
 	include("include/pie.php");
 	include("include/finHTML.php");
 ?>

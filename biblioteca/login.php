@@ -25,12 +25,6 @@ if($_POST){
    			//se define una sesion y se guarda el dato session_start();
    			$_SESSION["autenticado"] = "si";
    			$_SESSION["usuario"] = $_POST["usuario"];
-			$_SESSION["nombreusr"] = $row->nombre . " " . $row->apellido;
-   			if(!isset($_COOKIE["usuario"])){
-   				setcookie("usuario", $_POST["usuario"]);
-           		setcookie("password",$_POST["password"]);
-				}
-   			header ("Location: bienvenida.php");
 			}
 		else
 			{
@@ -41,15 +35,12 @@ if($_POST){
 	}
 }
 ?>
-
-
 <script language="JavaScript" type="text/javascript">
   location.href = 'bienvenida.php'
 </script>
 <!-- fin CONTENIDO-->
 </div>
 <?php
-include("include/cerrar_conexion.php");
 	include("include/pie.php");
 	include("include/finHTML.php");
 ?>
