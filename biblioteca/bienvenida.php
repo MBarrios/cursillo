@@ -9,11 +9,11 @@
 	include("include/cabecera_administrador.php");
 	/*menu para un usuario sin permisos e inicio del contenido*/
 	include("include/menu_administrador.php");
-	/*crea la conexion a la base de datos utilizando una funcion*/
-	include("include/crear_conexion.php");
-	conectar_a("biblioteca2");
-//	session_start();
 //	include("include/cookie.php");
+//	checkCookie("bienvenida.php");
+
+echo $_COOKIE["usuario"];
+echo $_COOKIE["password"];
 ?>
 <h4>Bienvenido a la zona reservada</h4>
 <p>Desde esta zona reservada puede gestionar la biblioteca para insertar, borrar, insertar editoriales...</p>

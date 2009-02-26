@@ -9,6 +9,8 @@
 	include("include/crear_conexion.php");
 	conectar_a("biblioteca2");
 //	include("include/cookie.php");
+//	checkCookie("bienvenida.php");
+
 ?>
 <h4>Zona reservada</h4>
 <p>Solo si esta registrado como usuario en la db puede acceder a la zona reservada</p>
@@ -22,6 +24,7 @@
 <!-- fin CONTENIDO-->
 </div>
 <?php
+include("include/cerrar_conexion.php");
 	include("include/pie.php");
 	include("include/finHTML.php");
 ?>
