@@ -8,8 +8,6 @@
 	include("include/menu_usuario.php");
 	/*crea la conexion a la base de datos utilizando una funcion*/
 	include("include/crear_conexion.php");
-	include("include/seguridad.php");
-
 	conectar_a("biblioteca2");
 
 if(isset($_GET["buscar"])){
@@ -82,6 +80,7 @@ $resultado=mysql_query($sql);
 <!-- fin CONTENIDO-->
 </div>
 <?php
+include("include/cerrar_conexion.php");
 	include("include/pie.php");
 	include("include/finHTML.php");
 ?>

@@ -37,6 +37,7 @@
 <!-- fin CONTENIDO-->
 </div>
 <?php
+include("include/cerrar_conexion.php");
 	include("include/pie.php");
 	include("include/finHTML.php");
 ?>
