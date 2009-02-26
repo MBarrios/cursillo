@@ -9,6 +9,8 @@
 	/*crea la conexion a la base de datos utilizando una funcion*/
 	include("include/crear_conexion.php");
 	conectar_a("biblioteca2");
+	include("include/cookie.php");
+	checkCookies("modificar_disponivilidad.php");
 ?>
 <h4>Modificar disponibilidad 1/3</h4>
 <p>Seleccionar el titulo del libro y ver su disponibilidad</p>
