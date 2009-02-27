@@ -6,6 +6,8 @@
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 		<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" type="text/javascript" src="md5.js"></script>
+<script language="JavaScript" type="text/javascript" src="sort.js"></script>
+
 </head>
 	<body>
 		<!--inicio GENERAL-->
