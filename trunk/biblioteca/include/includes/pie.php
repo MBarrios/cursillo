@@ -3,7 +3,5 @@
 
   <p>Patio de butacas<br />
   	area................................</p>
-
-
 <!--final PIE-->
 </div>
