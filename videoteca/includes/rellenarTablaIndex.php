@@ -10,4 +10,3 @@ $resultado=mysql_query($sql);
 		echo "</tbody></table>";
 		?>
 
-
