@@ -7,9 +7,10 @@ include("includes/crear_conexion.php");
 conectar_a("videoteca");
 //contenido
 echo "<h3>Listado de películas</h3>";
-include("includes/rellenarCabeceraTablaBusqueda.php");
+$cabecera=array("titulo","genero","valor");
 $sql="select p.titulo,s.nombre,g.descripcion from pelicula as p,soporte as s ,genero as g where p.idgenero=g.id and p.idsoporte=s.id";
-include("includes/rellenarTablaIndex.php");
+include("includes/tablaSql.php");
+crearTabla($sql,$cabecera);
 ?>
 
 
