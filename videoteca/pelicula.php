@@ -14,12 +14,20 @@ conectar_a("videoteca");
   	<label for="titulo">Titulo:</label>
     <input type="text" name="titulo" id="titulo" size="40" maxlength="40"/><br />
     <label>Soporte</label>
-    <input type="radio" name="soporte" id="soporte" value="1"/>
-  	<label for="soporte">DVD</label>
-  	<input type="radio" name="soporte" id="soporte" value="2"/>
-  	<label for="soporte">VHS</label>
-  	<input type="radio" name="soporte" id="soporte" checked value="3"/>
-  	<label for="soporte">LD</label><br />
+    <!--Cargar los distintos generos en el combo-->
+  	<?php
+  		$sql="select * from soporte";
+  		$resultado=mysql_query($sql);
+  		while ($fila=mysql_fetch_array($resultado)){
+  			if($fila["id"]==1)
+  				 echo "<input type='radio' name='soporte' id='soporte' checked value=".$fila["id"]." checked />";
+  			 else
+  		 		 echo "<input type='radio' name='soporte' id='soporte' value=".$fila["id"]." />";
+  		 	echo "<label for='soporte'>".$fila["nombre"]."</label>";
+  		}
+  	?>
+  	<br />
+  	<!--Cargar los distintos generos en el combo-->
   	<?php
   		$sql="select * from genero";
   		$resultado=mysql_query($sql);
@@ -30,6 +38,7 @@ conectar_a("videoteca");
   		 echo "<option value=".$fila["id"].">".$fila["descripcion"]."</option>";
   	?>
  	</select><br />
+ 	<!--Cargar los distintos directores en el combo-->
  	  	<?php
   		$sql="select * from director";
   		$resultado=mysql_query($sql);
@@ -37,19 +46,16 @@ conectar_a("videoteca");
   	<select name="director" id="director">
   	<?php
   		while ($fila=mysql_fetch_array($resultado))
-  		 echo "<option value=".$fila["id"].">".$fila["nombre"]." ".$fila["apellidos"]."</option>";
+  		echo "<option value=".$fila["id"].">".$fila["nombre"]." ".$fila["apellidos"]."</option>";
   	?>
  	</select><br />
   <label for="sinopsis">Sinopsis</label>
   <textarea name="sinopsis" id="sinopsis" rows="10" cols="50" wrap="off">
   </textarea><br />
-<label for="foto">Cartel</label>
+<label for="cartel">Cartel</label>
     <input type="file" name="cartel" id="cartel" value="Examinar" accept="image/jpg" size="40" maxlength="40"/><br />
     <input type="submit" name="continua" value="Continuar..."/>
   </form>
-
-
-
 <?php
 include("includes/pie.php");
 include("includes/finHTML.php");
