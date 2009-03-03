@@ -26,7 +26,7 @@ if(isset($_GET["id"])){
 		echo "</ul>";
 		echo "</div>";
 		echo "<img id='cartelFicha' src='images/peliculas/".$cartel."' alt='cartel de la pelicula' /><br />";
-		echo "<div id='sinopsis' class='negrita'>Sinopsis:</div> ".$sinopsis;
+		echo "<div id='sinopsis'><span class='negrita'>Sinopsis:</span> ".$sinopsis."</div>";
 	}
 }
 
