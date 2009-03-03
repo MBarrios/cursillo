@@ -1,7 +1,7 @@
 <?php
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h1>INSERTAR PELICULA</h1>";
+echo "<h2>INSERTAR PELICULA</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");

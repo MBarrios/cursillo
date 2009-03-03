@@ -4,7 +4,7 @@
 	<head>
 		<title>Mi pagina</title>
 		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-		<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
+		<link href="estilo.css" rel="stylesheet" type="text/css" />
       <script type="text/javascript"  src="sorttable.js"></script>
 <script language="JavaScript" type="text/javascript">
   function mostrar_ficha(){

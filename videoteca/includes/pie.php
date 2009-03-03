@@ -3,7 +3,7 @@
 <!-- inicio PIE-->
 <div id="pie">
 
-  <p>Patio de butacas<br />
-  	area................................</p>
+  <p><span class="negrita">Patio de butacas</span><br />
+  	AREA-escuela de diseño y nuevas tecnologias</p>
 <!--final PIE-->
 </div>
