@@ -1,7 +1,7 @@
 <?php
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h1>FICHA DE PELICULAS</h1>";
+echo "<h2>FICHA DE PELICULAS</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");
@@ -10,30 +10,29 @@ if(isset($_GET["id"])){
 	$resultado=mysql_query($sql);
 	if($fila=mysql_fetch_array($resultado)){
 		//rellenar pagina con los datos
-		echo "<h2>Ficha peliculas</h2>";
-		echo "<p>";
-		echo "Titulo: ".$fila["tit"]."<br />";
-		echo "Genero: ".$fila["ge"]."<br />";
-		echo "Soporte: ".$fila["so"]."<br />";
-		echo "Director: ".$fila["nom"]." ".$fila["apel"]."<br />";
+		echo "<div id='ficha'>";
+		echo "<span class='negrita'>Titulo:</span> ".$fila["tit"]."<br />";
+		echo "<span class='negrita'>Genero:</span> ".$fila["ge"]."<br />";
+		echo "<span class='negrita'>Soporte:</span> ".$fila["so"]."<br />";
+		echo "<span class='negrita'>Director:</span> ".$fila["nom"]." ".$fila["apel"]."<br />";
 		$sinopsis=$fila["sin"];
 		$cartel=$fila["c"];
 		$sql="select actor.nombre as nom, actor.apellidos as apel from actor, pelicula, actores_por_pelicula as a where pelicula.id=".$fila["id"]." and pelicula.id=a.idpelicula and actor.id=a.idactor";
 		$resultado=mysql_query($sql);
-		echo "Actores principales:<br /><ul>";
+		echo "<span class='negrita'>Actores principales:</span><br /><ul id='listaactores'>";
 		while($fila=mysql_fetch_array($resultado)){
 			echo "<li>".$fila["nom"]." ".$fila["apel"]."</li>";
 		}
 		echo "</ul>";
-		echo "</p>";
+		echo "</div>";
 		echo "<img id='cartelFicha' src='images/peliculas/".$cartel."' alt='cartel de la pelicula' /><br />";
-		echo "Sinopsis: ".$sinopsis;
+		echo "<div id='sinopsis' class='negrita'>Sinopsis:</div> ".$sinopsis;
 	}
 }
 
 ?>
 
-  <p>BUSCADOR DE PELICULAS</p>
+  <h2 id="buscador">BUSCADOR DE PELICULAS</h2>
   <form action="" method="get">
   <select name="titulos" id="titulos" onchange="mostrar_ficha();">
   <?php

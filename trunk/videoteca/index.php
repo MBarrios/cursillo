@@ -1,10 +1,10 @@
 <?php
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h1>Home</h1>";
+echo "<h2>Home</h2>";
 include("includes/menu_usuario.php");
 ?>
-<img src="images/pagina/home.gif" alt="descripción" />
+<div id="imagen"></div>
 <?php
 include("includes/pie.php");
 include("includes/finHTML.php");
