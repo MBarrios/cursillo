@@ -2,7 +2,7 @@
 $orden="p.titulo";
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h2>LISTADO de películas ordenado</h2>";
+echo "<h2 class='colorRojo'>LISTADO de películas ordenado</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");

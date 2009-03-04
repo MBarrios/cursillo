@@ -81,7 +81,7 @@ h5{
 	font-size: 13px;
 }
 h2{
-	color: #e27272;
+	/*color: #e27272;*/
 	text-align: right;
 	margin-right: 40px;
 	margin-top: 24px;
@@ -90,8 +90,9 @@ h2{
 	width: 480px;
 	margin-top: 40px;
 	margin-left:240px;
-	border-style: solid;
-	border-width: 1px;
+	/*border-style: solid;
+	border-width: 1px;*/
+
 }
 /*********************************/
 /*Inicio del estilo de las tablas*/
@@ -111,6 +112,9 @@ td,th{
 	border-bottom-color: #e18181;
 	border-bottom-width: 1px;
 }
+/***********************************/
+/*Contenido de las pagina actor.php*/
+/***********************************/
 #listaactores{
 margin-top:10px;
 padding-left: 40px;
@@ -125,38 +129,101 @@ padding-left: 40px;
 	border-bottom: solid 20px #cc0000;
 	padding-bottom: 20px;
 	}
+/***********************************/
+/*Contenido de las pagina ficha.php*/
+/***********************************/
 #ficha{
-
-	float:left;
+	width:300px;
 	border-style: solid;
-	border-width: 1px;
-	line-height: 2em;
 }
 #cartelFicha{
 	width:150;
 	height:200;
-margin-left:130px;
-		border-style: solid;
-	border-width: 1px;
+	float:right;
 	}
 #sinopsis{
 	width: 480px;
-	clear: both;
-	margin-top: 0px;
+	margin-top: 10px;
 	padding-top: 0px;
-		border-style: solid;
-	border-width: 1px;
 	}
-
 #buscador{
 	margin-right: 0px;
 	}
+/***********************************/
+/*Contenido de las pagina index.php*/
+/***********************************/
 #imagen{
 	width: 268px;
 	height: 363px;
 	margin-left:10px;
 	background-image: url("images/pagina/home.gif");
 	}
+/**************************************/
+/*Contenido de las pagina pelicula.php*/
+/**************************************/
+#pasos{
+	text-align: right;
+	display:block;
+}
+/******************************/
+/*Contenido de los formularios*/
+/******************************/
+form{
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+}
+.alinear{
+  margin-left:85px;
+  display:block;
+}
+.etiquetas{
+    display:block;
+	float: left;
+	}
+#sinopsis{
+	width: 400px;
+}
+fieldset{
+	clear: both;
+	padding:10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+}
+.boton{
+	width:100px;
+	height:22px;
+	margin-top:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;
+	background-color: red;
+	color: #ffffff;
+	}
+/***************************************/
+/*Contenido de las pagina pelicula2.php*/
+/***************************************/
+#col1{
+	float: left;
+	margin: 5px;
+	width: 150px;
+}
+#col2{
+	float:left;
+	margin: 5px;
+	width: 150px;
+}
+#col3{
+	margin: 5px;
+	margin-left:300px;
+	width: 150px;
+}
+
+/******************************/
+/*Contenido del pie de pagina */
+/******************************/
 #pie{
 	width:700px;
 	margin: 30px 30px;
@@ -173,4 +240,7 @@ a{
 	}
 .cursiva{
 	font-style: italic;
+	}
+.colorRojo{
+	color: #e27272;
 	}

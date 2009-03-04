@@ -1,7 +1,7 @@
 <?php
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h2>INSERTAR ACTOR</h2>";
+echo "<h2 class='colorRojo'>INSERTAR ACTOR</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");
@@ -9,17 +9,17 @@ conectar_a("videoteca");
 
 ?>
 
-  <form action="actor.php" method="get">
-  	<label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre" size="40" maxlength="40"/><br />
-    <label for="apellidos">Apellidos</label>
-    <input type="text" name="apellidos" id="apellidos" size="40" maxlength="40"/><br />
-    <input type="submit" name="insertar" value="Insertar"/>
+  <form action="actor.php" name="actor" method="get">
+  	<label class="etiquetas" for="nombre">Nombre</label>
+    <input class="alinear" type="text" name="nombre" id="nombre"/><br />
+    <label class="etiquetas" for="apellidos">Apellidos</label>
+    <input class="alinear" type="text" name="apellidos" id="apellidos"/><br />
+    <input type="submit" name="insertar" class="boton" value="Insertar"/>
   </form>
 <?php
 
-if ($_GET){
-	$sql="select * from actor where nombre='".$_GET["genero"]."'";
+if (isset($_GET["insertar"])){
+	$sql="select * from actor where nombre='".$_GET["nombre"]."'";
 	$resultado=mysql_query($sql);
 	if (mysql_num_rows($resultado)>0)
 		echo "el actor que esta intentando introducir, ya esta en la base de datos";
@@ -47,6 +47,7 @@ echo "\n";
  </textarea>
 
 <?php
+
 include("includes/pie.php");
 include("includes/finHTML.php");
 ?>
