@@ -1,7 +1,7 @@
 <?php
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h2>INSERTAR PELICULA</h2>";
+echo "<h2 class='colorRojo'>INSERTAR PELICULA</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");
@@ -9,38 +9,61 @@ if(!$_POST){
 ?>
 
    <form action="pelicula2.php" method="post" enctype="multipart/form-data">
-   <span>Completar los siguientes datos del formulario.Pagina 2/2</span><br />
+   <span id="pasos">Completar los siguientes datos del formulario.<span class="colorRojo">Pagina 1/2</span></span><br />
 <?php
 //creacion de checkBox mediante una consulta a la tabla actor
-$sql="select * from actor";
+$sql="select count(*) as cantidad from actor";
+$resultado=mysql_query($sql);
+$fila=mysql_fetch_array($resultado);
+$total=$fila["cantidad"];
+$inicio=0;
+$cantidad=ceil($total/3);
+$sql="select * from actor limit $inicio,$cantidad";
+$inicio=$cantidad;
 $resultado=mysql_query($sql);
 $i=0;
+echo "<div id='col1'>";
 while($fila=mysql_fetch_array($resultado)){
-	echo "<input type='checkbox' name='actor[]' id='actor' value=".$fila["id"]." />";
-	echo "<label for='actor'>".$fila["nombre"]." ".$fila["apellidos"]."</label>";
-	$i=$i+1;
-	//para que escriba los checkbox en tres columnas
-	if ($i==3){
-		echo "<br />";
-		$i=0;
+	echo "<input type='checkbox' name='actor[]' id='actor'  value=".$fila["id"]." />";
+	echo "<label for='actor' >".$fila["nombre"]." ".$fila["apellidos"]."</label><br />";
 	}
-}
+	echo "</div>";
+
+$sql="select * from actor limit $inicio,$cantidad";
+$resultado=mysql_query($sql);
+$i=0;
+$inicio=$cantidad*2;
+echo "<div id='col2'>";
+while($fila=mysql_fetch_array($resultado)){
+	echo "<input type='checkbox' name='actor[]' id='actor'  value=".$fila["id"]." />";
+	echo "<label for='actor' >".$fila["nombre"]." ".$fila["apellidos"]."</label><br />";
+	}
+	echo "</div>";
+	$sql="select * from actor limit $inicio,$total";
+$resultado=mysql_query($sql);
+$i=0;
+echo "<div id='col3'>";
+while($fila=mysql_fetch_array($resultado)){
+	echo "<input type='checkbox' name='actor[]' id='actor'  value=".$fila["id"]." />";
+	echo "<label for='actor' >".$fila["nombre"]." ".$fila["apellidos"]."</label><br />";
+	}
+echo "</div>";
 ?>
 
  <fieldset>
  <legend>Insertar nuevos actores</legend>
-  	<label for="nombre1">Nombre:</label>
-    <input type="text" name="nombre1" id="nombre1" size="40" maxlength="40"/><br />
-  	<label for="apellidos1">Apellidos:</label>
-    <input type="text" name="apellidos1" id="apellidos1" size="40" maxlength="40"/><br />
-    <label for="nombre2">Nombre:</label>
-    <input type="text" name="nombre2" id="nombre2" size="40" maxlength="40"/><br />
- <label for="apellidos2">Apellidos:</label>
-    <input type="text" name="apellidos2" id="apellidos2" size="40" maxlength="40"/><br />
-  	<label for="nombre3">Nombre:</label>
-    <input type="text" name="nombre3" id="nombre3" size="40" maxlength="40"/><br />
-    <label for="apellidos3">Apellidos:</label>
-    <input type="text" name="apellidos3" id="apellidos3" size="40" maxlength="40"/><br />
+  	<label class="etiquetas" for="nombre1">Nombre:</label>
+    <input class="alinear" type="text" name="nombre1" id="nombre1" size="40" maxlength="40"/><br />
+  	<label class="etiquetas" for="apellidos1">Apellidos:</label>
+    <input class="alinear" type="text" name="apellidos1" id="apellidos1" size="40" maxlength="40"/><br />
+    <label class="etiquetas" for="nombre2">Nombre:</label>
+    <input class="alinear" type="text" name="nombre2" id="nombre2" size="40" maxlength="40"/><br />
+ <label class="etiquetas" for="apellidos2">Apellidos:</label>
+    <input class="alinear" type="text" name="apellidos2" id="apellidos2" size="40" maxlength="40"/><br />
+  	<label class="etiquetas" for="nombre3">Nombre:</label>
+    <input class="alinear" type="text" name="nombre3" id="nombre3" size="40" maxlength="40"/><br />
+    <label class="etiquetas" for="apellidos3">Apellidos:</label>
+    <input class="alinear" type="text" name="apellidos3" id="apellidos3" size="40" maxlength="40"/><br />
     </fieldset>
 
   <input type="hidden" name="titulo" id="titulo" value="<?php echo $_GET["titulo"];?>" size="40" maxlength="40"/>
@@ -49,7 +72,7 @@ while($fila=mysql_fetch_array($resultado)){
   <input type="hidden" name="director" id="director" value="<?php echo $_GET["director"];?>" size="40" maxlength="40"/>
   <input type="hidden" name="sinopsis" id="sinopsis" value="<?php echo $_GET["sinopsis"];?>" size="40" maxlength="40"/>
   <input type="hidden" name="cartel" id="cartel" value="<?php echo $_GET["cartel"];?>" size="40" maxlength="40"/>
-  <input type="submit" name="continua" value="Continuar..."/>
+  <input type="submit" name="continuar" id="continuar" class="boton" value="Continuar..."/>
   </form>
 <?php
 }

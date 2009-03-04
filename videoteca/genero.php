@@ -1,7 +1,7 @@
 <?php
 include("includes/inicioHTML.php");
 include("includes/cabecera_usuario.php");
-echo "<h2>INSERTAR GENERO</h2>";
+echo "<h2 class='colorRojo'>INSERTAR GENERO</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");
@@ -10,11 +10,11 @@ conectar_a("videoteca");
 ?>
 
   <form action="genero.php" method="get">
-  	<label for="abreviatura">Abreviatura</label>
-    <input type="text" name="abreviatura" id="abrebiatura" size="40" maxlength="40"/><br />
-    <label for="genero">Genero</label>
-    <input type="text" name="genero" id="genero" size="40" maxlength="40"/><br />
-    <input type="submit" name="insertar" value="Insertar"/>
+  	<label for="abreviatura" class="etiquetas" >Abreviatura</label>
+    <input class="alinear" type="text" name="abreviatura" id="abrebiatura" /><br />
+    <label class="etiquetas" for="genero">Genero</label>
+    <input class="alinear" type="text" name="genero" id="genero"/><br />
+    <input type="submit" name="insertar" class="boton" value="Insertar"/>
   </form>
 <?php
 

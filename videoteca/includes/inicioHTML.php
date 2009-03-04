@@ -7,6 +7,8 @@
 		<link href="estilo.css" rel="stylesheet" type="text/css" />
       <script type="text/javascript"  src="sorttable.js"></script>
 <script language="JavaScript" type="text/javascript">
+
+
   function mostrar_ficha(){
   	alert(document.getElementById("titulos").value);
   	var id=document.getElementById("titulos").value;
