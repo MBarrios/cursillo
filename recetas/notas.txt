@@ -1,0 +1,5 @@
+-validar input text
+	-mayusculas minusculas
+	-acentos
+	-numeros letras
+	-vacio
