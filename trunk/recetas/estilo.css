@@ -1,0 +1,94 @@
+/*REINICIAR TODOS LOS VALORES PARA QUE SE VEA IGUAL EN DISTINTOS NAVEGADORES*/
+
+/* Padding y margin */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,
+	 p,  blockquote,th,td,textarea,table {
+	margin: 0;
+	padding: 0;
+}
+
+/* Tamaños de los headers */
+/*h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+*/
+/* Estilos de las listas
+ol, ul {
+list-style: none;
+}*/ /* Estilo y grosor de las fuentes */
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Bordes de las tablas */
+table {
+	border-spacing: 0;
+}
+
+/* Otros bordes */
+fieldset,img {
+	border: 0;
+}
+
+/* Alineacón del texto */
+caption,th {
+	text-align: left;
+}
+
+/* Comillas */
+q:before,q:after {
+	content: ”;
+}
+#general{
+	width: 700px;
+	background-color:#ff9200;
+	margin:0px auto;
+	padding: 2px;
+	}
+#cabecera{
+	width: 696px;
+	padding:0px;
+	text-align:center;
+	background-color: #999900;
+	border-style: solid;
+	border-color: #ffffff;
+	border-width: 2px;
+	border-bottom:none;
+	background-image: url("IMAGES/logo.gif");
+	background-position: top left;
+	background-repeat: no-repeat;
+	}
+#actual{
+	width: 696px;
+	background-color: #cccc99;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #ffffff;
+	border-bottom: none;
+	border-top: none;
+}
+/***************************/
+/**********MENU*************/
+/***************************/
+#menu{
+	width: 400px;
+	margin-left: 300px;
+	margin-top: 40px;
+}
+#menu ul{
+	list-style: none;
+	}
+#menu ul li{
+	display: block;
+	float: left;
+	background-color: #dda600;
+	}
+#contenido{
+	width: 700px;
+	background-color: #ffffff;
+	}
+#izq{
+	width: 75%;
+	float: left;
+}
