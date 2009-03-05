@@ -5,11 +5,9 @@ echo "<h2 class='colorRojo'>INSERTAR PELICULA</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");
-
-
 ?>
 
-  <form action="pelicula2.php" method="get">
+  <form action="pelicula2.php" method="post" enctype="multipart/form-data>
   <span id="pasos">Completar los siguientes datos del formulario.<span class="colorRojo">Pagina 1/2</span></span><br />
   	<label class="etiquetas" for="titulo">Titulo:</label>
     <input type="text" name="titulo" id="titulo" class="alinear"/><br />
@@ -53,8 +51,8 @@ conectar_a("videoteca");
   		echo "<option value=".$fila["id"].">".$fila["nombre"]." ".$fila["apellidos"]."</option>";
   	?>
  	</select><br />
-  <label for="sinopsis" class="etiquetas">Sinopsis:</label>
-  <textarea name="sinopsis" id="sinopsis" class="alinear" wrap="off">
+  <label for="sinopsisForm" class="etiquetas">Sinopsis:</label>
+  <textarea name="sinopsisForm" id="sinopsisForm" class="alinear" wrap="off">
   </textarea><br />
 <label for="cartel" class="etiquetas">Cartel</label>
     <input type="file" name="cartel" id="cartel" class="alinear" value="Examinar" accept="image/jpg"/><br />

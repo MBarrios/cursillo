@@ -132,9 +132,9 @@ padding-left: 40px;
 /***********************************/
 /*Contenido de las pagina ficha.php*/
 /***********************************/
+
 #ficha{
 	width:300px;
-	border-style: solid;
 }
 #cartelFicha{
 	width:150;
@@ -143,7 +143,7 @@ padding-left: 40px;
 	}
 #sinopsis{
 	width: 480px;
-	margin-top: 10px;
+	margin-top: 100px;
 	padding-top: 0px;
 	}
 #buscador{
@@ -182,8 +182,8 @@ form{
     display:block;
 	float: left;
 	}
-#sinopsis{
-	width: 400px;
+#sinopsisForm{
+	width: 350px;
 }
 fieldset{
 	clear: both;

@@ -5,7 +5,17 @@ echo "<h2 class='colorRojo'>INSERTAR PELICULA</h2>";
 include("includes/menu_usuario.php");
 include("includes/crear_conexion.php");
 conectar_a("videoteca");
-if(!$_POST){
+include("includes/redimensionar.php");
+
+	//if(isset($_POST["continuar"])){
+	echo $_POST["cartel"];
+	if($_FILES["cartel"]!=null){
+		echo "a entrado";
+		copy($_FILES["cartel"]["tmp_name"], "images/peliculas/".$_FILES["cartel"]["name"]);
+		redimensionar("jpg","images/peliculas/".$_FILES["cartel"]["name"],"images/peliculas/".$_FILES["cartel"]["name"],150,200,95);
+	}
+	//}
+	if(!isset($_POST["continuar2"])){
 ?>
 
    <form action="pelicula2.php" method="post" enctype="multipart/form-data">
@@ -48,8 +58,8 @@ while($fila=mysql_fetch_array($resultado)){
 	echo "<label for='actor' >".$fila["nombre"]." ".$fila["apellidos"]."</label><br />";
 	}
 echo "</div>";
+//if get
 ?>
-
  <fieldset>
  <legend>Insertar nuevos actores</legend>
   	<label class="etiquetas" for="nombre1">Nombre:</label>
@@ -66,13 +76,13 @@ echo "</div>";
     <input class="alinear" type="text" name="apellidos3" id="apellidos3" size="40" maxlength="40"/><br />
     </fieldset>
 
-  <input type="hidden" name="titulo" id="titulo" value="<?php echo $_GET["titulo"];?>" size="40" maxlength="40"/>
-  <input type="hidden" name="soporte" id="soporte" value="<?php echo $_GET["soporte"];?>" size="40" maxlength="40"/>
-  <input type="hidden" name="genero" id="genero" value="<?php echo $_GET["genero"];?>" size="40" maxlength="40"/>
-  <input type="hidden" name="director" id="director" value="<?php echo $_GET["director"];?>" size="40" maxlength="40"/>
-  <input type="hidden" name="sinopsis" id="sinopsis" value="<?php echo $_GET["sinopsis"];?>" size="40" maxlength="40"/>
-  <input type="hidden" name="cartel" id="cartel" value="<?php echo $_GET["cartel"];?>" size="40" maxlength="40"/>
-  <input type="submit" name="continuar" id="continuar" class="boton" value="Continuar..."/>
+  <input type="hidden" name="titulo" id="titulo" value="<?php echo $_POST["titulo"];?>" size="40" maxlength="40"/>
+  <input type="hidden" name="soporte" id="soporte" value="<?php echo $_POST["soporte"];?>" size="40" maxlength="40"/>
+  <input type="hidden" name="genero" id="genero" value="<?php echo $_POST["genero"];?>" size="40" maxlength="40"/>
+  <input type="hidden" name="director" id="director" value="<?php echo $_POST["director"];?>" size="40" maxlength="40"/>
+  <input type="hidden" name="sinopsis" id="sinopsis" value="<?php echo $_POST["sinopsisForm"];?>" size="40" maxlength="40"/>
+  <input type="hidden" name="cartel" id="cartel" value="<?php echo $_POST["cartel"];?>" size="40" maxlength="40"/>
+  <input type="submit" name="continuar2" id="continuar2" class="boton" value="Continuar..."/>
   </form>
 <?php
 }
