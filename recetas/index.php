@@ -24,7 +24,7 @@ conectar_a("recetas");
 		<h4>QUESOS ARTESANALES CANARIOS</H4>
 		<p>Los quesos artesanales canarios forman parte del patrimonio cultural las islas; de su produccion dependen numerosas familias de ganaderos repartidos por toda la geografía Canaria, quienes obtienen con la neta de este producto su principal forma de subsistencia.</p>
 		<p>Son un lujo alimentario, originados directamente del campo, su forma de elaboración con leche cruda está reconodida en toda Europa bajo diferentes acepciones segun el pais de origen.</p>
-		<img id="izq" src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" />
+		<img id="izqImagen" src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" />
 	<!--fin PORTADA1-->
 	</div>
 	<!--inicio PORTADA2-->
@@ -34,7 +34,7 @@ conectar_a("recetas");
 		Poner en una cacerola al fuego el agua con el azúcar  y hervir. Echar los arándanos lavados y dejar que hierva unos 10 minutos, hasta que las bayas exploten y entonces, bajar el fuego hasta que se reduzca a la mitad. Dejar enfriar a temperatura ambiente y poner en el frigorífico hasta que la salsa se espese por completo. Se sirve fría como mermelada o caliente como salsa.</p>
 		<p>Ingredientes:<br />
 		250g de arándanos rojos americanos frescos, 150g. de azúcar, 200 ml de agua.</p>
-		<img id="dcha" src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
+		<img id="dchaImagen" src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
 	<!--fin PORTADA2-->
 	</div>
 <!--fin IZQUIERDA-->
@@ -63,7 +63,7 @@ conectar_a("recetas");
 				if($fila=mysql_fetch_array($resultado)){
 					echo "<div id='menu_del_dia'>";
 						echo $fila["Titulo"]."<br />";
-						echo "<img src='IMAGES/fotosrecetas/".$fila["Foto"]."' alt='imagen receta: ".$fila["Titulo"]."' /><br />";
+						echo "<img width='60' heigth='60' id='imagenAleatoria' src='IMAGES/fotosrecetas/".$fila["Foto"]."' alt='imagen receta: ".$fila["Titulo"]."' /><br />";
 						echo substr($fila["Elaboracion"],0,50)."...<br />";
 					echo "</div>";
 				}

@@ -87,8 +87,12 @@ q:before,q:after {
 #contenido{
 	width: 700px;
 	background-color: #ffffff;
+	clear: both;
 	}
 #izq{
 	width: 75%;
 	float: left;
+}
+#pie{
+clear: both;
 }
