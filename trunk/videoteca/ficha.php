@@ -11,7 +11,7 @@ if(isset($_GET["id"])){
 	$resultado=mysql_query($sql);
 	if($fila=mysql_fetch_array($resultado)){
 		//rellenar pagina con los datos
-		echo "<img id='cartelFicha' src='images/peliculas/".$fila["c"]."' alt='cartel de la pelicula' /><br />";
+		echo "<div><img id='cartelFicha' src='images/peliculas/".$fila["c"]."' alt='cartel de la pelicula' /><br />";
 		echo "<div id='ficha'>";
 		echo "<span class='negrita'>Titulo:</span> ".$fila["tit"]."<br />";
 		echo "<span class='negrita'>Genero:</span> ".$fila["ge"]."<br />";
