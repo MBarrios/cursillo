@@ -45,6 +45,8 @@ q:before,q:after {
 	background-color:#ff9200;
 	margin:0px auto;
 	padding: 2px;
+	font-family: sans-serif;
+	font-size: 12px;
 	}
 #cabecera{
 	width: 696px;
@@ -88,11 +90,77 @@ q:before,q:after {
 	width: 700px;
 	background-color: #ffffff;
 	clear: both;
+	padding: 6px;
+	}
+.portada{
+	border-style: solid;
+	border-width: 1px;
+	clear: both;
+	padding: 0px;
+	margin-top: 20px;
 	}
 #izq{
-	width: 75%;
+	width: 70%;
 	float: left;
+	border-style: solid;
+	border-width: 1px;
 }
+#texto1{
+	width: 65%;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 34%;
+}
+#texto2{
+	width: 65%;
+	border-style: solid;
+	border-width: 1px;
+}
+#izqImagen{
+	float: left;
+	border-style: solid;
+	border-width: 1px;
+}
+#dchaImagen{
+	float: right;
+		border-style: solid;
+	border-width: 1px;
+	}
+#dcha{
+	width: 25%;
+		border-style: solid;
+	border-width: 1px;
+	margin-left: 73%;
+	background-color: #eeeedd;
+	margin-top: 20px;
+}
+#dcha h4{
+	background-color: #cbcb98;
+	}
+#menu_del_dia{
+	margin: 6px 3px;
+	text-align: justify;
+	border-style: solid;
+	border-width: 1px;
+	}
+#menu_del_dia div{
+	height: 60px;
+	width:55%;
+	margin:0px;
+	margin-left: 44%;
+	border-style: solid;
+	border-width: 1px;
+}
+#imagenAleatoria{
+	float: left;
+	margin-bottom: 5px;
+	}
 #pie{
 clear: both;
+}
+h4{
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-color: #ff9200;
+margin-top: 10px;
 }
