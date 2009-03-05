@@ -22,19 +22,23 @@ conectar_a("recetas");
 	<!--inicio PORTADA1-->
 	<div id="portada1" class="portada">
 		<h4>QUESOS ARTESANALES CANARIOS</H4>
-		<p>Los quesos artesanales canarios forman parte del patrimonio cultural las islas; de su produccion dependen numerosas familias de ganaderos repartidos por toda la geografía Canaria, quienes obtienen con la neta de este producto su principal forma de subsistencia.</p>
-		<p>Son un lujo alimentario, originados directamente del campo, su forma de elaboración con leche cruda está reconodida en toda Europa bajo diferentes acepciones segun el pais de origen.</p>
 		<img id="izqImagen" src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" />
+		<div id="texto1">
+			<p>Los quesos artesanales canarios forman parte del patrimonio cultural las islas; de su produccion dependen numerosas familias de ganaderos repartidos por toda la geografía Canaria, quienes obtienen con la neta de este producto su principal forma de subsistencia.</p>
+			<p>Son un lujo alimentario, originados directamente del campo, su forma de elaboración con leche cruda está reconodida en toda Europa bajo diferentes acepciones segun el pais de origen.</p>
+		</div>
 	<!--fin PORTADA1-->
 	</div>
 	<!--inicio PORTADA2-->
 	<div id="portada2" class="portada">
-		<h4>DE TEMPORADA:Mermelada de arándanos rojos</h4>
+	<h4>DE TEMPORADA:Mermelada de arándanos rojos</h4>
+	<img id="dchaImagen" src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
+    <div id="texto2">
 		<p>Elaboracion:<br />
 		Poner en una cacerola al fuego el agua con el azúcar  y hervir. Echar los arándanos lavados y dejar que hierva unos 10 minutos, hasta que las bayas exploten y entonces, bajar el fuego hasta que se reduzca a la mitad. Dejar enfriar a temperatura ambiente y poner en el frigorífico hasta que la salsa se espese por completo. Se sirve fría como mermelada o caliente como salsa.</p>
 		<p>Ingredientes:<br />
 		250g de arándanos rojos americanos frescos, 150g. de azúcar, 200 ml de agua.</p>
-		<img id="dchaImagen" src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
+	</div>
 	<!--fin PORTADA2-->
 	</div>
 <!--fin IZQUIERDA-->
@@ -54,7 +58,6 @@ conectar_a("recetas");
 		//crea tres divs con tres recetas diferentes
 		while ($i<3){
 			$numReceta=rand(1,$cantidad);
-			echo $numReceta."<br />";
 			$numReceta=$numReceta-1;
 			if($numRecetaAnterior!=$numReceta){
 				$sql="select * from recetario limit $numReceta,1";
@@ -62,9 +65,9 @@ conectar_a("recetas");
 				$numRecetaAnterior=$numReceta;
 				if($fila=mysql_fetch_array($resultado)){
 					echo "<div id='menu_del_dia'>";
-						echo $fila["Titulo"]."<br />";
+						echo "<p>".$fila["Titulo"]."</p>";
 						echo "<img width='60' heigth='60' id='imagenAleatoria' src='IMAGES/fotosrecetas/".$fila["Foto"]."' alt='imagen receta: ".$fila["Titulo"]."' /><br />";
-						echo substr($fila["Elaboracion"],0,50)."...<br />";
+						echo "<div>".substr($fila["Elaboracion"],0,50)."...</div>";
 					echo "</div>";
 				}
 
@@ -73,6 +76,13 @@ $i=$i+1;
 		}
 	}
 	?>
+
+  <form action="index" method="get">
+  	<input type="text" name="mail" id="mail" value="e-mail" /><br />
+  	<input type="submit" name="enviar" id="enviar" value="Enviar"/>
+  	<p>Suscribete al boletin mensual, gracias</p>
+  </form >
+
 <!--fin DERECHA-->
 </div>
 <!-- fin CONTENIDO-->
