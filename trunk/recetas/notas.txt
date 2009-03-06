@@ -3,3 +3,5 @@
 	-acentos
 	-numeros letras
 	-vacio
+-busqueda rapida: insertar ingrediente y te envia a la pagina busqueda (falta por añadir)
+- insertar imagen en tabla
