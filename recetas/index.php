@@ -5,6 +5,7 @@ include("includes/cabecera.php");
 include("includes/crear_conexion.php");
 conectar_a("recetas");
 ?>
+<!--DIV en el que aparece la seccion en la que estas-->
  <div id="actual">
   <?php
    if(basename($_SERVER["PHP_SELF"])=="index.php")
@@ -20,20 +21,20 @@ conectar_a("recetas");
 <!--inicio IZQUIERDA-->
 <div id="izq">
 	<!--inicio PORTADA1-->
-	<div id="portada1" class="portada">
+	<div>
 		<h4>QUESOS ARTESANALES CANARIOS</H4>
-		<img id="izqImagen" src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" />
-		<div id="texto1">
+		<img src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" />
+		<div>
 			<p>Los quesos artesanales canarios forman parte del patrimonio cultural las islas; de su produccion dependen numerosas familias de ganaderos repartidos por toda la geografía Canaria, quienes obtienen con la neta de este producto su principal forma de subsistencia.</p>
 			<p>Son un lujo alimentario, originados directamente del campo, su forma de elaboración con leche cruda está reconodida en toda Europa bajo diferentes acepciones segun el pais de origen.</p>
 		</div>
 	<!--fin PORTADA1-->
 	</div>
 	<!--inicio PORTADA2-->
-	<div id="portada2" class="portada">
+	<div>
 	<h4>DE TEMPORADA:Mermelada de arándanos rojos</h4>
-	<img id="dchaImagen" src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
-    <div id="texto2">
+	<img src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
+    <div >
 		<p>Elaboracion:<br />
 		Poner en una cacerola al fuego el agua con el azúcar  y hervir. Echar los arándanos lavados y dejar que hierva unos 10 minutos, hasta que las bayas exploten y entonces, bajar el fuego hasta que se reduzca a la mitad. Dejar enfriar a temperatura ambiente y poner en el frigorífico hasta que la salsa se espese por completo. Se sirve fría como mermelada o caliente como salsa.</p>
 		<p>Ingredientes:<br />
@@ -44,7 +45,7 @@ conectar_a("recetas");
 <!--fin IZQUIERDA-->
 </div>
 <!--inicio DERECHA-->
-<div id="dcha">
+<div >
 <h4>El menu de hoy</h4>
 
 <!--rellenando las tres recetas del menu del dia-->
@@ -64,15 +65,16 @@ conectar_a("recetas");
 				$resultado=mysql_query($sql);
 				$numRecetaAnterior=$numReceta;
 				if($fila=mysql_fetch_array($resultado)){
-					echo "<div id='menu_del_dia'>";
-						echo "<p>".$fila["Titulo"]."</p>";
-						echo "<img width='60' heigth='60' id='imagenAleatoria' src='IMAGES/fotosrecetas/".$fila["Foto"]."' alt='imagen receta: ".$fila["Titulo"]."' /><br />";
+					echo "<p>".$fila["Titulo"]."</p>";
+					echo "<div>";
+
+						echo "<img src='IMAGES/fotosrecetas/".$fila["Foto"]."' alt='imagen receta: ".$fila["Titulo"]."' /><br />";
 						echo "<div>".substr($fila["Elaboracion"],0,50)."...</div>";
 					echo "</div>";
 				}
-
-			}
 $i=$i+1;
+			}
+
 		}
 	}
 	?>
@@ -85,6 +87,7 @@ $i=$i+1;
 
 <!--fin DERECHA-->
 </div>
+<div id="espacio"></div>
 <!-- fin CONTENIDO-->
 </div>
 <?php
