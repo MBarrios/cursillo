@@ -18,26 +18,26 @@ else{
 <div id="contenido">
   	<div id="encuesta">
   	<?php if(!$_GET){
-  	echo "<form action='encuesta.php' method='get'>";
+  	echo "<form action='resultadosEncuesta.php' method='get'>";
 
 	$sql="select * from encuesta";
 	$resultado=mysql_query($sql);
-	while ($fila=mysql_fetch_array($resultado)){
+	if ($fila=mysql_fetch_array($resultado)){
 		echo "<p>".$fila["pregunta"]."</p>";
-		echo "<select name='encuesta'>";
-   		echo "<option value='".$fila["valor1"]."'>".$fila["respuesta1"]."</option>";
-    	echo "<option value='".$fila["valor2"]."'>".$fila["respuesta2"]."</option>";
-    	echo "<option value='".$fila["valor3"]."'>".$fila["respuesta3"]."</option>";
+		echo "<select name='opcion' id='opcion'>";
+   		echo "<option value='votos1']>".$fila["respuesta1"]."</option>";
+    	echo "<option value='votos2']>".$fila["respuesta2"]."</option>";
+    	echo "<option value='votos3']>".$fila["respuesta3"]."</option>";
    echo "</select>";
+
+	$id=$fila["id_encuesta"];
+	echo  "<input type='hidden' name='id' id='id' value=".$id." />";
 	}
-	echo  "<input type='hidden' name='codigo' value='".fila."'/>";
-
-	echo  "<input type='submit' name='enviar' value='Enviar'/>";
-
+	echo  "<input type='submit' name='enviar' id='enviar' value='Enviar'/>";
+	echo "<a href=resultadosEncuesta.php?id=".$id." id='ver'>ver resultados de la encuesta</a>";
 
 	 echo "</form>";
 
-  	}else{
 
   	}
   	?>
