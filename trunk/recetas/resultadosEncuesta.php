@@ -28,6 +28,29 @@ else{
   				echo $fila["votos1"];
   				echo $fila["votos2"];
   				echo $fila["votos3"];
+  				$datosTabla = array(
+		array( $fila["respuesta1"], $fila["votos1"], "#BDDA4C"),
+		array( $fila["respuesta2"], $fila["votos2"], "#FF9A68"),
+		array( $fila["respuesta3"], $fila["votos3"], "#69ABBF"),
+);
+$maximo = 0;
+foreach ( $datosTabla as $ElemArray ) { $maximo += $ElemArray[1]; }
+?>
+<body>
+<table width="400" cellspacing="0" cellpadding="2">
+<?php foreach( $datosTabla as $ElemArray ) {
+$porcentaje = round((( $ElemArray[1] / $maximo ) * 100),2);
+?>
+<tr>
+	<td width="20%"><strong><?php echo( $ElemArray[0] ) ?></strong></td>
+	<td width="10%"><?php echo( $porcentaje ) ?>%</td>
+	<td>
+		<table width="<?php echo($porcentaje) ?>%" bgcolor="<?php echo($ElemArray[2]) ?>">
+		<tr><td> </td></tr>
+	</table>
+	</td>
+	</tr>
+	<?php }
   				$cantidad=$fila["votos1"]+$fila["votos2"]+$fila["votos3"];
   				echo $fila["pregunta"]."<br />";
   				echo $fila["respuesta1"]."-".number_format($fila["votos1"]*100/$cantidad,2)."%<br />";
