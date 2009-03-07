@@ -24,7 +24,7 @@ else{
   			echo $_GET["id"];
   			$sql="select * from encuesta where id_encuesta=".$_GET["id"];
   			$resultado=mysql_query($sql);
-  			while($fila=mysql_fetch_array($resultado)){
+  			if($fila=mysql_fetch_array($resultado)){
   				echo $fila["votos1"];
   				echo $fila["votos2"];
   				echo $fila["votos3"];
