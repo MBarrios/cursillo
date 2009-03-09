@@ -1,0 +1,19 @@
+#interior1{
+background-image: url("IMAGES/encuesta/AZUL.GIF");
+border-style: solid;
+border-width: 1px;
+border-color:#000000;
+}
+#interior2{
+background-image: url("IMAGES/encuesta/ROJO.GIF");
+border-style: solid;
+border-width: 1px;
+border-color:#000000;
+
+}
+#interior3{
+background-image: url("IMAGES/encuesta/VERDE.GIF");
+border-style: solid;
+border-width: 1px;
+border-color:#000000;
+}
