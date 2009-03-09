@@ -67,8 +67,9 @@ if ($fila = mysql_fetch_array($resultado)) {
 			$resultado = mysql_query($sql);
 			$numRecetaAnterior = $numReceta;
 			if ($fila = mysql_fetch_array($resultado)) {
+				echo "<div id='dcha_interior'>";
 				echo "<p>" . $fila["Titulo"] . "</p>";
-				echo "<div>";
+
 
 				echo "<div id='img_platos'><img src='IMAGES/fotosrecetas/" . $fila["Foto"] . "' alt='imagen receta: " . $fila["Titulo"] . "' width=60 height=60 /></div>";
 				echo "<div>" . substr($fila["Elaboracion"], 0, 50) . "...</div>";
