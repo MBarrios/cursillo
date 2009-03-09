@@ -8,35 +8,33 @@ conectar_a("recetas");
 <!--DIV en el que aparece la seccion en la que estas-->
  <div id="actual">
   <?php
-
-
 if (basename($_SERVER["PHP_SELF"]) == "index.php")
-	echo "<p>Portada</p>";
+	echo "<span>Portada</span>";
 else {
 	$pagina = explode(".", basename($_SERVER["PHP_SELF"]));
-	echo "<p>" . ucfirst($pagina[0]) . "</p>";
+	echo "<span>" . ucfirst($pagina[0]) . "</span>";
 }
 ?>
-   </div>
+  </div>
 <!-- inicio CONTENIDO-->
-			<div id="contenido">
+<div id="contenido">
 <!--inicio IZQUIERDA-->
 <div id="izq">
 	<!--inicio PORTADA1-->
-	<div>
+	<div id="izq_interior">
 		<h4>QUESOS ARTESANALES CANARIOS</H4>
-		<img src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" />
-		<div>
+		<div id="imagen1"><img src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" /></div>
+		<div id="texto1">
 			<p>Los quesos artesanales canarios forman parte del patrimonio cultural las islas; de su produccion dependen numerosas familias de ganaderos repartidos por toda la geografía Canaria, quienes obtienen con la neta de este producto su principal forma de subsistencia.</p>
 			<p>Son un lujo alimentario, originados directamente del campo, su forma de elaboración con leche cruda está reconodida en toda Europa bajo diferentes acepciones segun el pais de origen.</p>
 		</div>
 	<!--fin PORTADA1-->
 	</div>
 	<!--inicio PORTADA2-->
-	<div>
+	<div id="izq_interior">
 	<h4>DE TEMPORADA:Mermelada de arándanos rojos</h4>
-	<img src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" />
-    <div >
+	<div id="imagen2"><img src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" /></div>
+    <div id="texto2">
 		<p>Elaboracion:<br />
 		Poner en una cacerola al fuego el agua con el azúcar  y hervir. Echar los arándanos lavados y dejar que hierva unos 10 minutos, hasta que las bayas exploten y entonces, bajar el fuego hasta que se reduzca a la mitad. Dejar enfriar a temperatura ambiente y poner en el frigorífico hasta que la salsa se espese por completo. Se sirve fría como mermelada o caliente como salsa.</p>
 		<p>Ingredientes:<br />
@@ -47,7 +45,7 @@ else {
 <!--fin IZQUIERDA-->
 </div>
 <!--inicio DERECHA-->
-<div >
+<div id="dcha">
 <h4>El menu de hoy</h4>
 
 <!--rellenando las tres recetas del menu del dia-->
@@ -72,7 +70,7 @@ if ($fila = mysql_fetch_array($resultado)) {
 				echo "<p>" . $fila["Titulo"] . "</p>";
 				echo "<div>";
 
-				echo "<img src='IMAGES/fotosrecetas/" . $fila["Foto"] . "' alt='imagen receta: " . $fila["Titulo"] . "' /><br />";
+				echo "<div id='img_platos'><img src='IMAGES/fotosrecetas/" . $fila["Foto"] . "' alt='imagen receta: " . $fila["Titulo"] . "' width=60 height=60 /></div>";
 				echo "<div>" . substr($fila["Elaboracion"], 0, 50) . "...</div>";
 				echo "</div>";
 			}
@@ -82,13 +80,13 @@ if ($fila = mysql_fetch_array($resultado)) {
 	}
 }
 ?>
-
+<div id="formulario">
   <form action="index" method="get">
   	<input type="text" name="mail" id="mail" value="e-mail" /><br />
   	<input type="submit" name="enviar" id="enviar" value="Enviar"/>
   	<p>Suscribete al boletin mensual, gracias</p>
   </form >
-
+</div>
 <!--fin DERECHA-->
 </div>
 <div id="espacio"></div>

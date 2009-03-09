@@ -1,3 +1,159 @@
+/*REINICIAR TODOS LOS VALORES PARA QUE SE VEA IGUAL EN DISTINTOS NAVEGADORES*/
+
+/* Padding y margin */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,
+	 /*p,*/ blockquote,th,td,textarea {
+	margin: 0;
+	padding: 0;
+}
+
+/* Tamaños de los headers */
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+/* Estilos de las listas
+ol, ul {
+list-style: none;
+}*/ /* Estilo y grosor de las fuentes */
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Bordes de las tablas */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Otros bordes */
+fieldset,img {
+	border: 0;
+}
+
+/* Alineacón del texto */
+caption,th {
+	text-align: left;
+}
+
+/* Comillas */
+q:before,q:after {
+	content: ”;
+}
+
+body{
+	background-color: #fefefe;
+}
+#general{
+	width:700px;
+	background-color: #ffffff;
+	border: solid 2px #ffcd83;
+	margin:0px auto;
+	padding:2px 0px;
+	font-family: verdana;
+	font-size: 11px;
+}
+#cabecera{
+	width: 696px;
+	height:80px;
+	margin:0px auto;
+	padding-top:20px;
+	background-color: #999900;
+	background-image: url("IMAGES/logo.gif");
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: center;
+}
+#cabecera form{
+	margin-top: 10px;
+	}
+#actual{
+	width:694px;
+	height:20px;
+	background-color: #cccc99;
+	margin:0px auto;
+	border:solid 1px transparent;
+	vertical-align: middle;
+	}
+/**********************/
+/**menu cabecera*******/
+/**********************/
+#menu{
+	width:420px;
+	height:20px;
+	margin-left: 283px;
+}
+#menu ul{
+	list-style: none;
+}
+#menu ul li{
+	background-color: #dda600;
+	display: block;
+	float: left;
+	padding: 0px 6px;
+}
+#menu ul li a{
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+}
+/*******************/
+/*****CONTENIDO*****/
+/*******************/
+#contenido{
+	width: 696px;
+	margin:0px auto;
+	}
+/*parte izquierda del contenido de la portada*/
+#izq{
+	width: 74%;
+	float: left;
+}
+#izq_interior{
+margin:10px 10px;
+
+	}
+h4{
+	margin:10px 0px;
+}
+#imagen1{
+	float: left;
+}
+
+#imagen2{
+	float:right;
+	}
+#texto1{
+	padding-left: 160px;
+}
+#texto2{
+	padding-right: 160px;
+}
+/*parte derecha del contenido de la portada*/
+#dcha{
+	width: 25%;
+	margin-left: 74%;
+	background-color: #efefde;
+}
+#formulario{
+	width:90%;
+	margin:30px auto;
+	padding:10px 10px;
+	padding-right:0px;
+	background-color: #cccc99;
+}
+#img_platos{
+float: left;
+	}
+#espacio{
+	width: 698px;
+	height: 1px;
+	clear: both;
+	}
+/*****************************/
+/**tabla para graficos********/
+/*****************************/
 #interior1{
 background-image: url("IMAGES/encuesta/AZUL.GIF");
 border-style: solid;
