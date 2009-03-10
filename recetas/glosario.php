@@ -33,7 +33,7 @@ $limite_inf=($pagina-1)*10;
 $sql="select * from glosario limit ".$limite_inf.",10";
 $resultado=mysql_query($sql);
 echo "Pagina $pagina de $pag_total ";
-echo "<table border='0'>";
+echo "<table border='0' id='glosario'>";
 while($fila=mysql_fetch_array($resultado)){
 	echo "<tr>";
 	echo "<td id='fondoCelda'>".$fila[0].".- ".$fila[1]." </td>";
