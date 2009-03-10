@@ -15,6 +15,7 @@
   	var direccion="ficha.php?id="+id;
   	location.href=direccion;
   }
+
 </script>
 
 </head>

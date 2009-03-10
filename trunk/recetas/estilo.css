@@ -23,8 +23,8 @@ address,caption,cite,code,dfn,em,strong,th,var {
 
 /* Bordes de las tablas */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	border-collapse:separate;
+
 }
 
 /* Otros bordes */
@@ -236,10 +236,11 @@ float: left;
 		}
 /*Contenido para el glosario*/
 #fondoCelda{
-
-	table-layout:auto;
 	background-color: #cccc99;
-
+width: 17%;
+	}
+#glosario td{
+	border-bottom: solid 2px #ff9200;
 	}
 /*espacio para que el contenido no se
 adecue al tamaño de la columna derecha, si no al mas largo*/
