@@ -4,13 +4,25 @@ include("includes/cabecera.php");
 include("includes/crear_conexion.php");
 conectar_a("recetas");
 ?>
+<div id="actual">
+<?php
+if(basename($_SERVER["PHP_SELF"])=="index.php")
+	echo "<p><span>Portada</span></p>";
+else{
+	$pagina =explode(".",basename($_SERVER["PHP_SELF"]));
+	echo "<p><span>".ucfirst($pagina[0])."</span></p>";
+ }
+?>
+</div>
+<!-- inicio CONTENIDO-->
+<div id="contenido" class="recetas">
 
 <h3>Busqueda por ingrediente, elaboracion o tipo de plato</h3>
-<form action="recetas2_links.php" method="get">
-	<label for="palabra"> Buscar la palabra clave:</label>
-	<input type="text" name="palabra" id="palabra" value="" />
-	<label for="tipo">en:</label>
-	<select name="tipo" id="tipo">
+<form action="recetas2_links.php" method="get" id="busqueda">
+	<label for="palabra"  class="etiquetas"> Buscar la palabra clave:</label>
+	<input type="text" name="palabra" id="palabra"   class="alinear" value="" />
+	<label for="tipo" id="tipoAlinear">en:</label>
+	<select name="tipo" id="tipo" >
 		<option value="todos">todos</option>
 		<option value="r.Ingredientes">ingrediente</option>
 		<option value="r.Elaboracion">elaboracion</option>
@@ -19,35 +31,39 @@ conectar_a("recetas");
 	<input type="submit" name="enviar" id="enviar"value="Enviar"/>
 </form>
 <h3>AÑADE tu receta</h3>
-<form action="recetas2_links.php" method="get">
-	<label for="nombre"> Nombre del plato:</label>
-	<input type="text" name="nombre" id="nombre" value="" /><br />
-	<label for="comensales"> Comensales:</label>
-	<input type="text" name="comensales" id="comensales" value="" />
-	<label for="tipo">Tipo receta:</label>
+<form action="recetas2_links.php" method="get" id="añadir" >
+	<label for="nombre" class="etiquetas"> Nombre del plato:</label>
+	<input type="text" name="nombre" id="nombre"  class="alinear" value="" /><br />
+	<label for="comensales" class="etiquetas"> Comensales:</label>
+	<input type="text" name="comensales" id="comensales" class="alinear" value="" />
+	<label for="tipo"  class="etiquetas">Tipo receta:</label>
 	<?php
 	$sql="select * from platos";
 	$resultado=mysql_query($sql);
-	echo "<select name='tipo' id='tipo'>";
+	echo "<select name='tipo' id='tipo'  class='alinear'>";
 	while($fila=mysql_fetch_array($resultado)){
 		echo "<option value='".$fila["CodPlato"]."'>".$fila["Tipoplato"]."</option><br />";
 	}
 	?>
 	</select><br />
-	<label for="tiempo"> Tiempo:</label>
-	<input type="text" name="tiempo" id="tiempo" value="" /><br />
-	<label for="ingredientes"> Ingredientes:</label>
-	<textarea name="ingredientes" id="ingredientes" rows="10" cols="50" wrap="off">
+	<label for="tiempo"  class="etiquetas"> Tiempo:</label>
+	<input type="text" name="tiempo" id="tiempo" class="alinear" value="" /><br />
+	<label for="ingredientes"  class="etiquetas"> Ingredientes:</label>
+	<textarea name="ingredientes" id="ingredientes" class="alinear" wrap="off">
 	</textarea><br />
-	<label for="elaboracion"> Elaboracion:</label>
-	<textarea name="elaboracion" id="elaboracion" rows="10" cols="50" wrap="off">
+	<label for="elaboracion"  class="etiquetas"> Elaboracion:</label>
+	<textarea name="elaboracion" id="elaboracion" class="alinear" wrap="off">
 	</textarea><br />
-	<label for="montaje">Montaje:</label>
-	<textarea name="montaje" id="montaje" rows="10" cols="50" wrap="off">
+	<label for="montaje"  class="etiquetas">Montaje:</label>
+	<textarea name="montaje" id="montaje"  class="alinear" wrap="off">
 	</textarea><br />
 	<input type="submit" name="enviarReceta" id="enviarReceta"value="Enviar receta"/>
 </form>
+<div id="espacio"></div>
+<!--final CONTENIDO-->
+</div>
 <?php
+
 include("includes/pie.php");
 include("includes/finHTML.php");
 ?>
