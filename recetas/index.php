@@ -20,7 +20,7 @@ else {
 <div id="contenido">
 <!--inicio IZQUIERDA-->
 <div id="izq">
-	<!--inicio PORTADA1-->
+	<!--inicio IZQ_INTERIOR-->
 	<div id="izq_interior">
 		<h4>QUESOS ARTESANALES CANARIOS</H4>
 		<div id="imagen1"><img src="IMAGES/portada/quesos_canarios.jpg" alt="quesos canarios" /></div>
@@ -35,9 +35,9 @@ else {
 	<h4>DE TEMPORADA:Mermelada de arándanos rojos</h4>
 	<div id="imagen2"><img src="IMAGES/portada/mermelada.jpg" alt="mermelada de arandanos rojos" /></div>
     <div id="texto2">
-		<p>Elaboracion:<br />
+		<p><span>Elaboracion:</span><br />
 		Poner en una cacerola al fuego el agua con el azúcar  y hervir. Echar los arándanos lavados y dejar que hierva unos 10 minutos, hasta que las bayas exploten y entonces, bajar el fuego hasta que se reduzca a la mitad. Dejar enfriar a temperatura ambiente y poner en el frigorífico hasta que la salsa se espese por completo. Se sirve fría como mermelada o caliente como salsa.</p>
-		<p>Ingredientes:<br />
+		<p><span>Ingredientes:</span><br />
 		250g de arándanos rojos americanos frescos, 150g. de azúcar, 200 ml de agua.</p>
 	</div>
 	<!--fin PORTADA2-->

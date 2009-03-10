@@ -48,12 +48,12 @@ body{
 #general{
 	width:700px;
 	background-color: #ffffff;
-	border: solid 2px #ffcd83;
+	border: solid 2px #ff9200;
 	margin:0px auto;
 	padding:2px 0px;
 	font-family: verdana;
 	font-size: 11px;
-	color:#c4896c;
+	color:#962b00;
 }
 #cabecera{
 	width: 696px;
@@ -67,7 +67,9 @@ body{
 	text-align: center;
 }
 #cabecera form{
-	margin-top: 10px;
+	margin-left:150px;
+	margin-top: 20px;
+
 	}
 #actual{
 	width:694px;
@@ -75,7 +77,12 @@ body{
 	background-color: #cccc99;
 	margin:0px auto;
 	border:solid 1px transparent;
-	vertical-align: middle;
+	font-size: 14px;
+	font-weight: bold;
+	}
+#actual p{
+	padding-top:0px;
+	margin-top:0px;
 	}
 /**********************/
 /**menu cabecera*******/
@@ -113,11 +120,9 @@ body{
 }
 #izq_interior{
 margin:10px 10px;
-
+margin-top:30px;
 	}
-h4{
-	margin:10px 0px;
-}
+
 #imagen1{
 	float: left;
 }
@@ -131,26 +136,34 @@ h4{
 #texto2{
 	padding-right: 160px;
 }
+#texto2 span{
+	font-weight: bold;
+}
 /*parte derecha del contenido de la portada*/
 #dcha{
 	width: 25%;
 	margin-left: 74%;
 	padding:3px;
 	background-color: #efefde;
+	font-size: 10px;
 }
 #dcha h4{
-	margin-top: 30px;
+	margin-top: 20px;
 	background-color: #cccc99;
-	font-size: 13px;
 	padding: 5px 0px;
 	border-bottom: solid 2px #c4896c;
 
 }
+#dcha p{
+	color: #5295b1;
+	font-weight: bold;
+}
 #dcha_interior{
-	margin-top: 30px;
-
+	margin-top: 25px;
 	}
-
+#img_platos{
+float: left;
+	}
 #formulario{
 	width:90%;
 	margin:3px auto;
@@ -159,14 +172,93 @@ h4{
 	padding-right:0px;
 	background-color: #cccc99;
 }
-#img_platos{
-float: left;
+#formulario form p{
+	color: #ffffff;
+	font-weight: bold;
+}
+/*contenido de la pagina de noticias*/
+#noticias{
+	width: 99%;
+	margin:10px auto;
+	padding:0px;
+ color: #0c6d9e;
+}
+.noticias{
+	font-size: 12px;
+	font-weight: bold;
+	 color: #0c6d9e;
+	border-bottom: solid 2px #ff9200;
 	}
+#noticias span{
+	font-size: 14px;
+	font-weight: bold;
+	}
+#texto_noticias{
+	width: 55%;
+	color: #0c6d9e;
+	}
+#imagen_noticias{
+	float: right;
+	margin: 0px;
+	}
+#otras_noticias{
+		width: 99%;
+	margin:10px auto;
+	padding:0px;
+ color: #0c6d9e;
+	}
+#otras_noticias a{
+	color: #0c6d9e;
+	}
+.margenes{
+	margin-top: 50px;
+	}
+/*contenido de la pagina recetas*/
+.recetas{
+	background-color: #cccc99;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+
+	}
+.alinear{
+  margin-left:120px;
+  display:block;
+}
+#palabra{
+  margin-left:0px;
+  display:block;
+  float: left;
+
+}
+.etiquetas{
+    display:block;
+	float: left;
+		}
+/*Contenido para el glosario*/
+#fondoCelda{
+
+	table-layout:auto;
+	background-color: #cccc99;
+
+	}
+/*espacio para que el contenido no se
+adecue al tamaño de la columna derecha, si no al mas largo*/
 #espacio{
 	width: 698px;
-	height: 1px;
+	height: 0px;
 	clear: both;
 	}
+/*pie de pagina*/
+#pie{
+
+	width:696px;
+	height:20px;
+	text-align: center;
+
+	margin: 0px auto;
+	background-color: #cccc99;
+	border: solid 1px #cccc99;
+}
 /*****************************/
 /**tabla para graficos********/
 /*****************************/
@@ -188,4 +280,11 @@ background-image: url("IMAGES/encuesta/VERDE.GIF");
 border-style: solid;
 border-width: 1px;
 border-color:#000000;
+}
+h4{
+	margin:10px 0px;
+	border-bottom: solid 2px #ff9200;
+	}
+h3{
+	margin:20px 0px;
 }
